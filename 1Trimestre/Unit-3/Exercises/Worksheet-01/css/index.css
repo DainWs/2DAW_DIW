@@ -1,0 +1,14 @@
+.characters .female {color: blue}
+.characters .male {color: red}
+
+.characters .bold {font-weight: bold;}
+.characters .italic {font-style: italic;}
+
+.middlemarch .characters { list-style-type: upper-roman; }
+.a-tale-of-two-cities .characters { list-style-type: lower-alpha; }
+
+.middlemarch .characters {letter-spacing: 1px;}
+
+.middlemarch .characters {transform: translate(100px);}
+
+* {font-family: Arial, Helvetica, Courier;}
