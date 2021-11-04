@@ -1,0 +1,32 @@
+¿qué hacen las reglas
+
+/* 
+    se aplica a aquellos div cuyo padre  con la clase padre,
+    tienen un hermano a mismo nivel y continuo con la clase hermano 
+*/
+.hermano + .padre div {
+    font-size: xx-large;
+    margin-left: 60px;
+} 
+
+/*
+    se aplica a aquellos parrafos que sean hermanos a mismo nivel con un div con id diva 
+*/
+div#diva ~ p {
+    background-color:lightgreen;
+}
+
+/*
+    se aplica a aquellos parrafos que sean hermanos a mismo nivel y continuo con un div con id diva 
+*/
+div#diva + p {
+    background-color:lightgreen;
+}
+
+/*
+    se aplica a aquellos parrafos que esten dentro de un div con id diva 
+*/
+div#diva p {
+    background-color:lightgreen;
+}
+
