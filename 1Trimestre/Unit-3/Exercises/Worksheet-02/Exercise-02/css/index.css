@@ -1,0 +1,35 @@
+/* Listas */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px;
+    padding: 3px;
+}
+
+ul li:nth-child(even){ /* para solo el enlace seria "ul li:nth-child(even) a" */
+    background-color: gray;
+}
+
+ul li:nth-child(odd) { /* para solo el enlace seria "ul li:nth-child(odd) a" */
+    background-color: lightgray;
+}
+
+/* Enlaces de las listas */
+ul li a {
+    color: blue;
+}
+
+ul li a:visited {
+    color: purple;
+}
+
+ul li a:hover {
+    color: yellow;
+}
+
+ul li a:active {
+    color: green;
+}

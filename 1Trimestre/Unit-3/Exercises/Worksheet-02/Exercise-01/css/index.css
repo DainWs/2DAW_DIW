@@ -1,0 +1,27 @@
+body {
+    background-color: gray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10pt;
+    color: black;
+}
+
+p.naranja {
+    background-color: blue;
+    color: orange;
+}
+
+p.consola {
+    background-color: black;
+    color: green;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a.importante {text-decoration: unset;}
+a.importante:hover {background-color: yellow;}
+
+h1#titulo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40pt;
+    color: darkgrey;
+}
+

@@ -1,0 +1,16 @@
+h1 { 
+    text-align: center;
+    font-family: fantasy;
+    color: darkred;
+}
+ol { list-style-type: upper-roman; }
+ul { 
+    list-style-type: square; 
+    background-color: lightyellow;
+}
+ul li {
+    background-color: gray;
+}
+ul:last-child {
+    list-style-image: url('https://th.bing.com/th/id/R.abbad8949080f9999215fe771069a7b6?rik=q1tO%2bdMRbKG9NA&pid=ImgRaw&r=0');
+}
