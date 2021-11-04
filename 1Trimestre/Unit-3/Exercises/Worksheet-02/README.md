@@ -12,16 +12,16 @@ Crea también un elemento id `#título` para aplicarlo a una etiqueta `<h1>`, pa
 
 ## Actividad 2:
 Dado el siguiente código HTML
-`
-<ul>
- <li><a href="#">United Kingdom</a></li>
- <li><a href="#">Germany</a></li>
- <li><a href="#">Finland</a></li>
- <li><a href="#">Russia</a></li>
- <li><a href="#">Spain</a></li>
- <li><a href="#">Poland</a></li>
-</ul>
-`
+```
+ <ul>
+  <li><a href="#">United Kingdom</a></li>
+  <li><a href="#">Germany</a></li>
+  <li><a href="#">Finland</a></li>
+  <li><a href="#">Russia</a></li>
+  <li><a href="#">Spain</a></li>
+  <li><a href="#">Poland</a></li>
+ </ul>
+```
 Escribe las reglas CSS necesarias para:
 - la lista aparezca sin viñeta
 - relleno de la lista 0px
@@ -36,7 +36,7 @@ Escribe las reglas CSS necesarias para:
 
 ## Actividad 3
 Dado el siguiente código HTML, y utilizando las pseudo-clases `first-child`, `first-of-type`, `nth-of-type`, `nth-last-of-type`, `last-of-type` y/o `last-child` conseguir el siguiente resultado:
-`
+```
  <ul>
  <li>Primero</li>
  <li>Segundo</li>
@@ -44,7 +44,7 @@ Dado el siguiente código HTML, y utilizando las pseudo-clases `first-child`, `f
  <li>Cuarto</li>
  <li>Quinto</li>
  </ul>
-`
+```
 
 ## Actividad 4
 El HTML que sigue es para una lista simple. Tienes que darle formato siguiendo las siguientes reglas:
@@ -59,7 +59,7 @@ El HTML que sigue es para una lista simple. Tienes que darle formato siguiendo l
 - En lugar de números, haz que los elementos de la lista estén ordenados alfabéticamente
 - Copia la lista en otra diferente. Esta lista será desordenada. Aplica un estilo a los elementos de la lista para que tengan puntos de viñeta cuadrada. El fondo de la lista será Amarillo claro. El fondo de cada element será gris. 
 - Haz otra copia. La viñeta será una imagen.
-`
+```
 <body>
     <h1>Books</h1>
     <ol>
@@ -85,19 +85,19 @@ El HTML que sigue es para una lista simple. Tienes que darle formato siguiendo l
         <li>Le Rouge et le Noir</li>
     </ol>
 <body>
-`
+```
 
 ## Actividad 5
 Para el HTML que sigue escribe las siguientes reglas CSS
 - Todos los div tienen color de fondo gris claro
 - Todos los elementos a que están dentro de un div tienen color de fondo azul y texto blanco
 - Añade esta regla a tu CSS. Comprueba el resultado y explica por qué ocurre.
-`
+```
 div div div a{
     background-color:red;
     color:yellow;
 }
-`
+```
 
 - Los elementos cuyo identificador es abuelo, tendrán un borde azul de 1 px. 
 - Todos los div que son hijos de abuelo tienen borde rojo de 2px.
@@ -105,7 +105,7 @@ div div div a{
 - Los párrafos adyacentes a la `.madre` tendrán fondo rosa claro
 - Todos los enlaces que tienen atributo title tienen fondo rojo
 - Todos los enlaces que no tienen el atributo `target=_blank` tienen fondo morado
-`
+```
 <div id="abuelo">
     <p>Párrafo 1</p>
     <p>Párrafo 2</p>
@@ -127,11 +127,11 @@ div div div a{
     <div>Párrafo 8</div>
     <p>Párrafo 9</p>
 </div>
-`
+```
 
 ## Actividad 6
 ¿qué hacen las reglas
-`
+```
 .hermano + .padre div {
     font-size: xx-large;
     margin-left: 60px;
@@ -148,4 +148,4 @@ div#diva + p {
 div#diva p {
     background-color:lightgreen;
 }
-`
+```
