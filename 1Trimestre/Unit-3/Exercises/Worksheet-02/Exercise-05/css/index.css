@@ -12,8 +12,8 @@ div div div a{
 }
 
 #abuelo { border: 1px solid blue; }
-#abuelo div { border: 1px solid red; }
-.padre > p { background-color: lime; }
-.madre > p { background-color: lightpink; }
+#abuelo > div { border: 4px solid red; }
+.padre + p { background-color: lime; }
+.madre ~ p { background-color: lightpink; }
 a[title] { background-color: red; }
-a[target=_blank] { background-color: purple; }
+a:not([target=_blank]) { background-color: purple; }
