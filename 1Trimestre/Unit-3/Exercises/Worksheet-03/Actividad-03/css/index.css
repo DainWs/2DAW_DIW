@@ -1,0 +1,19 @@
+tr, td, th {
+    width: 125px;
+    height: 25px;
+}
+
+thead {
+    background-color: #5B9BD5;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #D2DEEF;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #EAEFF7;
+}
+table tr:hover {
+    background-color: yellow;
+}

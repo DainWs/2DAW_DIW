@@ -1,0 +1,20 @@
+table, tr, td, th {
+    border: 1px solid black;
+}
+
+table { 
+    border-collapse: collapse;
+}
+
+tr, td, th {
+    width: 125px;
+    height: 25px;
+}
+
+thead {
+    background-color: gray;
+}
+
+tbody {
+    background-color: lightgray;
+}

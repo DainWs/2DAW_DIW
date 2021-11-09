@@ -1,0 +1,12 @@
+thead, tfoot {
+    background-color: gray;
+    color: white;
+    text-align: left;
+}
+
+tbody th {
+    background-color: lightgray;
+    color: gray;
+    text-align: right;
+    font-weight: bold;
+}
