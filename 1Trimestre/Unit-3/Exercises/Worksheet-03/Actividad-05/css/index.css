@@ -1,8 +1,41 @@
-input:required::after {
+header {
+    text-align: center;
+}
+
+legend {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+input[type="submit"] {
+    display:block;
+    margin:0px auto; 
+}
+
+input:required + p {
+    display: contents;
+    color: red;
+}
+
+input:required + label::after {
     color: red;
     content: "*";
+}
+
+input:focus {
+    outline-color: yellow;
+    outline-offset: 1px;
 }
 
 input:invalid {
     color: red;
 }
+
+input:not([type="submit"]):valid {
+    color: green;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    color: black;
+}
+
