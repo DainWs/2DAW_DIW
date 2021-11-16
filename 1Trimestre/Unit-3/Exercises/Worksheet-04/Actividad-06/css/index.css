@@ -1,0 +1,15 @@
+.multiplebackgrounds {
+    width: 500px;
+    height: 250px;
+}
+
+.multiplebackgrounds {
+    background: url("../images/decoration.png") left top no-repeat,
+        url("../images/ribbon.png") right bottom no-repeat,
+        url("../images/old_paper.jpg");
+}
+
+.multiplebackgrounds {
+    text-align: right;
+    font-weight: bold;
+}

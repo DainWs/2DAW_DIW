@@ -1,0 +1,40 @@
+div {
+    content-visibility: hidden;
+    margin: 0 auto;
+    border-radius: 0px;
+ }
+ 
+ #first {
+   width: 30px;
+   height: 30px;
+   border: 5px solid #221144;
+   background-color: #221144;
+   border-radius: 50%;
+ }
+ #second {
+   width: 60px;
+   height: 30px;
+   background-color: deeppink;
+   border: 5px solid deeppink;
+   border-radius: 20px;
+ }
+ #third {
+   width: 80px;
+   height: 40px;
+   background-color: darkorchid;
+   border: 5px solid darkorchid;
+   border-radius: 30px;
+ }
+ #fourth {
+   width: 100px;
+   height: 50px;
+   background-color: yellowgreen;
+   border: 5px solid yellowgreen;
+   border-radius: 40px;
+ }
+ #fifth {
+   width: 250px;
+   height: 100px;
+   border-top: 10px solid #221144;
+   border-radius: 30px;
+ }

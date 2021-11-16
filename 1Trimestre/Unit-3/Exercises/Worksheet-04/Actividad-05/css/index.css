@@ -1,0 +1,57 @@
+h1 { 
+    font-size: 20pt; 
+    margin: 0;
+}
+
+body > header {
+    border-bottom: 1px solid black;
+}
+
+body > main {
+    overflow: hidden;
+    margin-right: auto;
+    width: 90vw;
+}
+
+body > main > * { float: left; }
+body > main > aside { 
+    width: 200px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+body > main > article {
+    width: calc(100% - 200px);
+    box-sizing: border-box;
+    border-left: 1px solid black;
+}
+
+.receta  {
+    overflow: hidden;
+    padding: 0 50px;
+    margin-left: auto;
+}
+
+.receta .main-image {
+    margin: 0;
+}
+
+.receta .ingredientes {
+    float: right;
+}
+
+.receta .main-image img {
+    width: 100%;
+}
+
+body > footer {
+    border-top: 1px solid black;
+    margin: auto;
+    width: 90vw;
+}
+
+body > footer > * {
+    margin: auto;
+    width: 33%;
+    float: left;
+}
