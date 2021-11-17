@@ -1,10 +1,71 @@
+:root {
+    --primary-color: gainsboro;
+    --secondary-color: white;
+    --primary-text-color: black;
+    --secondary-text-color: white;
+    --nav-color: var(--primary-text-color);
+    --nav-background: var(--primary-color);
+    --nav-hover-color: var(--secondary-text-color);
+    --nav-hover-background: gray;
+    --nav-active-color: var(--secondary-text-color);
+    --nav-active-background: rgb(46, 46, 46);
+
+    --aside-width: 300px;
+}
+
 h1 { 
     font-size: 20pt; 
     margin: 0;
 }
+body { margin: 0; }
+body > header { border-bottom: 1px solid var(--primary-color); }
+body > header > h1 { margin: 20px 0 0 10px; }
 
-body > header {
-    border-bottom: 1px solid black;
+nav {
+    background-color: var(--nav-background);
+    border-bottom: 10px solid var(--nav-active-background);
+}
+
+nav ul { 
+    margin: 0;
+    padding: 0;
+}
+nav > ul { padding-inline-start: 10px; }
+nav ul > li { display: inline-block; }
+
+nav li > a {
+    display: block;
+    padding: 15px;
+
+    color: var(--nav-color);
+    text-decoration: none;
+}
+
+nav li:hover, nav li:hover > ul  {
+    background-color: var(--nav-hover-background);
+}
+
+nav li:hover a {
+    color: var(--nav-hover-color);
+}
+
+nav li:hover > ul, li:hover > ul > li {
+    display: block;
+}
+
+nav li:active, nav li.current,
+nav li:hover > ul > li:hover {
+    background-color: var(--nav-active-background);
+}
+
+nav li:active, nav li.current,
+nav li:active > a, nav li.current > a {
+    color: var(--secondary-text-color);
+}
+
+nav li > ul {
+    display: none;
+    position: absolute;
 }
 
 body > main {
@@ -15,13 +76,13 @@ body > main {
 
 body > main > * { float: left; }
 body > main > aside { 
-    width: 200px;
-    padding: 5px;
+    width: var(--aside-width);
+    padding: 20px;
     box-sizing: border-box;
 }
 
 body > main > article {
-    width: calc(100% - 200px);
+    width: calc(100% - var(--aside-width));
     box-sizing: border-box;
     border-left: 1px solid black;
 }
