@@ -17,8 +17,9 @@ h1 {
     font-size: 20pt; 
     margin: 0;
 }
-body { margin: 0; }
-body > header { border-bottom: 1px solid var(--primary-color); }
+body { 
+    margin: 0;
+}
 body > header > h1 { margin: 20px 0 0 10px; }
 
 nav {
@@ -68,51 +69,77 @@ nav li > ul {
     position: absolute;
 }
 
-body > main {
+body > main, .receta {
     overflow: hidden;
-    margin-right: auto;
-    width: 90vw;
 }
 
-body > main > * { float: left; }
 body > main > aside { 
     width: var(--aside-width);
+    float: left;
     padding: 20px;
     box-sizing: border-box;
 }
 
 body > main > article {
-    width: calc(100% - var(--aside-width));
+    width: calc(100% - (var(--aside-width) + 1));
     box-sizing: border-box;
-    border-left: 1px solid black;
+    border-left: 10px solid var(--nav-active-background);
+    margin-left: var(--aside-width);
 }
 
-.receta  {
-    overflow: hidden;
-    padding: 0 50px;
+.receta {
     margin-left: auto;
+}
+
+.receta > * {
+    padding: 0 50px;
+}
+
+.receta > header {
+    margin: 0;
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+    background-color: var(--primary-color);
 }
 
 .receta .main-image {
     margin: 0;
-}
-
-.receta .ingredientes {
-    float: right;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .receta .main-image img {
     width: 100%;
 }
 
+.receta .ingredientes {
+    float: right;
+}
+
 body > footer {
-    border-top: 1px solid black;
+    box-sizing: border-box;
     margin: auto;
-    width: 90vw;
+    border-top: 10px solid var(--nav-active-background);
+    padding: 0 20px;
+    width: 100%;
+    background-color: var(--primary-color);
+    
+}
+body > footer h3 {
+    margin: 0;
 }
 
 body > footer > * {
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+
+    padding: 15px;
     margin: auto;
     width: 33%;
-    float: left;
+}
+
+body > footer ul {
+    padding-left: 20px;
 }
