@@ -13,13 +13,18 @@
     --aside-width: 300px;
 }
 
+body, nav ul,
+body > footer h3,
+.receta > header,
+.receta .main-image,
+h1 {
+    margin: 0;
+}
+
 h1 { 
     font-size: 20pt; 
-    margin: 0;
 }
-body { 
-    margin: 0;
-}
+
 body > header > h1 { margin: 20px 0 0 10px; }
 
 nav {
@@ -28,7 +33,6 @@ nav {
 }
 
 nav ul { 
-    margin: 0;
     padding: 0;
 }
 nav > ul { padding-inline-start: 10px; }
@@ -73,16 +77,23 @@ body > main, .receta {
     overflow: hidden;
 }
 
+body > main > aside,
+body > main > article,
+.receta .main-image,
+body > footer,
+body > footer > * {
+    box-sizing: border-box;
+}
+
+
 body > main > aside { 
     width: var(--aside-width);
     float: left;
     padding: 20px;
-    box-sizing: border-box;
 }
 
 body > main > article {
     width: calc(100% - (var(--aside-width) + 1));
-    box-sizing: border-box;
     border-left: 10px solid var(--nav-active-background);
     margin-left: var(--aside-width);
 }
@@ -96,19 +107,13 @@ body > main > article {
 }
 
 .receta > header {
-    margin: 0;
     padding: 15px 0;
-    width: 100%;
     text-align: center;
     background-color: var(--primary-color);
 }
 
-.receta .main-image {
-    margin: 0;
-    width: 100%;
-    box-sizing: border-box;
-}
-
+.receta > header,
+.receta .main-image,
 .receta .main-image img {
     width: 100%;
 }
@@ -118,7 +123,6 @@ body > main > article {
 }
 
 body > footer {
-    box-sizing: border-box;
     margin: auto;
     border-top: 10px solid var(--nav-active-background);
     padding: 0 20px;
@@ -126,13 +130,9 @@ body > footer {
     background-color: var(--primary-color);
     
 }
-body > footer h3 {
-    margin: 0;
-}
 
 body > footer > * {
     display: inline-block;
-    box-sizing: border-box;
     vertical-align: top;
 
     padding: 15px;
