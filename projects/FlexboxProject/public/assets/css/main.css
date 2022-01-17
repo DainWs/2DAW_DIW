@@ -1,0 +1,96 @@
+@import url("https://fonts.google.com/share?selection.family=Baloo%20Tamma%202:wght@400;500;600;700;800%7CIndie%20Flower");
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --primary-color: #014d4e;
+    --secundary-color: #ff9408;
+    --tertiary-color: #017374;
+    --secundary-modified: #ff94088e;
+    --tertiary-modified: #01727498;
+}
+
+li {
+    list-style: none;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+#aside_nav {
+    position: sticky;
+    float: left;
+    
+    width: 5vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: var(--tertiary-color);
+}
+
+.aside_nav--logo { 
+    margin: 0;
+}
+
+.aside_nav--logo > img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.aside_nav--socialnet {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.aside_nav--socialnet a i {
+    font-size: calc(1rem + 0.66667vw);
+    color: white;
+    padding-bottom: 3vw;
+
+    transition: color 0.5s ease-in-out;
+}
+
+.aside_nav--socialnet a i:hover,
+.aside_nav--socialnet a i:active {
+    background-color: var(--secundary-color);
+}
+
+main {
+    margin-left: 5vw;
+
+    width: calc(100% - 5vw);
+    height: 100vh;
+}
+
+#header_nav {
+    display: flex;
+    justify-content: flex-end;
+
+    background-color: var(--secundary-color);
+}
+
+#header_nav > * {
+    padding: 1rem;
+    height: 5vw;
+}
+
+#header_nav > li:hover {
+    background-color: var(--tertiary-color);
+}
