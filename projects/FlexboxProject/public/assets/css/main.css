@@ -1,9 +1,14 @@
-@import url("https://fonts.google.com/share?selection.family=Baloo%20Tamma%202:wght@400;500;600;700;800%7CIndie%20Flower");
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;600;700;800&family=Indie+Flower&display=swap');
 
 @keyframes hero-animation {
     0% {left: 100%; opacity: 0;}
     25% {left: 100%; opacity: 0;}
     100% {left: 0; opacity: 1;}
+}
+
+@keyframes design-1 {
+    0% { width: 0; }
+    100% { width: 100%; }
 }
 
 *,
@@ -16,7 +21,7 @@
 
 :root {
     font-size: 62.5%;
-    font-family: 'Baloo Tamma', sans-serif;
+    font-family: 'Baloo Tamma 2';
 
     --primary-color: #014d4e;
     --secundary-color: #ff9408;
@@ -33,7 +38,7 @@ a:link,
 a:visited {
     text-decoration: none;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.5vw;
 }
 
 body {
@@ -133,14 +138,12 @@ body {
         }
 
             section#work > div,
-            section#about > div,
             section#services > div {
                 flex-basis: 50vh;
                 flex-grow: 1;
             }
 
-            section#work > div > img,
-            section#about > div > img {
+            section#work > div > img {
                 width: 100%;
             }
 
@@ -173,7 +176,6 @@ body {
                 background-color: var(--secundary-modified);
 
                 color: white;
-                font-family: 'Indie Flower', cursive;
 
                 animation-name: hero-animation;
                 animation-duration: 3s;
@@ -183,13 +185,16 @@ body {
                     font-size: 5vw;
                 }
 
-                .hero--description p {
-                    font-size: 2vw;
+                .hero--description > p {
+                    font-family: 'Indie Flower';
+                    font-size: 2.5vw;
                 }
 
                 .hero--description footer {
-                    font-family: 'Baloo Tamma', sans-serif;
+                    font-size: 1.3vw;
                     font-weight: bold;
+                    letter-spacing: 0.2em;
+                    text-transform: uppercase;
                 }
 
         /* Work Section */
@@ -222,31 +227,61 @@ body {
 
         /* About Section */
         section#about {
+            overflow: visible;
             background-color: var(--secundary-color);
         }
 
-            .about__image {
-                padding: 0 1rem;
+            section#about > div {
+                flex-basis: 50vh;
             }
 
+            .about__image {
+                padding: 0 1rem;
+                width: 40%;
+                max-height: 100vh;
+            }
+
+                .about__image img {
+                    max-width: 100%;
+                    height: 100%;
+                }
+
             .about__description {
-                padding: 2rem;
+                padding: 0 2rem;
                 
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+
+                font-size: 2vw;
             }
 
             .about__description > header,
             .about__description > footer {
-                margin: 1rem 0;
+                margin: 3rem 0;
 
                 color: white;
                 text-transform: uppercase;
             }
 
+                .about__description > header > h2 {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .about__description > header > h2::after {
+                    width: 4rem;
+                    height: 0.3rem;
+                    content: " ";
+                    background-color: var(--primary-color);
+                }
+
             .about__description > p {
-                font-family: 'Indie Flower', cursive;
+                font-family: 'Indie Flower';
+            }
+
+            .about__description > footer > p {
+                font-size: 0.5vw;
             }
 
         /* Services Section */
@@ -255,16 +290,23 @@ body {
             flex-wrap: wrap;
             justify-content: space-around;
             align-content: space-around;
+
+            background-color: var(--primary-color);
         }
             
             .services__card {
                 margin: 2rem;
-                border: 5vw solid var(--secundary-color);
-                border-width: 0 5vw;
-                padding: 5vw 0;
+                padding: 5vw;
 
+                display: inline-block;
                 color: white;
-                background-color: var(--secundary-color);
+                background: linear-gradient(to left, var(--secundary-color) 50%, var(--primary-color) 50%) right;
+                background-size: 200%;
+                transition: .5s ease-out;
+            }
+            
+            .services__card:hover {
+                background-position: left;
             }
             
                 .services__card i {
@@ -277,24 +319,164 @@ body {
 
                     color: black;
 
-                    font-family: 'Indie Flower', cursive;
+                    font-family: 'Indie Flower';
                     font-size: 1.5rem;
                     font-weight: bold;
                 }
 
                 .services__card p {
-                    font-family: 'Baloo Tamma', cursive;
+                    font-family: 'Baloo Tamma';
                     font-size: 1.2rem;
                 }
 
-                .services__card:hover {
-                    border-left-color: var(--primary-color);
-                    border-right-color: var(--primary-color);
-                    background-color: var(--primary-color);
-                    
-                    transition: 
-                        background-color 0.6s, 
-                        border-left-color 0.5s 0.1s,
-                        border-right-color 0.5s 0.1s;
+        /* Services Section */
+        section#skills {
+            display: flex;
+            flex-direction: column;
+        }
+
+            .skills__design,
+            .skills__coding {
+                margin: 2vw 5vw;
+
+                flex-grow: 1;
+
+                color: white;
+            }
+
+                .skills__design > header,
+                .skills__coding > header {
+                    margin: 0;
+                    margin-bottom: 2vw;
+
+                    color: black;
+                    font-size: 2vw;
                 }
+
+                .skills__design > div,
+                .skills__coding > div {
+                    margin: 1vw 0;
+                }
+
+                    .skills__design > div h4,
+                    .skills__coding > div h4 {
+                        font-size: 1.5vw;
+                    }
+
+                    .skills__design--progress,
+                    .skills__coding--progress {
+                        padding: 0.5rem;
+                        border-radius: 2rem;
+                        background-color: var(--primary-color);
+                    }
+
+                        /*dibujar la barra de progreso*/
+                        .skills__design--progress span,
+                        .skills__coding--progress span {
+                            position: relative;
+                            display: inline-block;
+                            vertical-align: middle;
+                            height: 2rem;
+                            border-radius: 1rem;
+                            background-color: var(--secundary-color);
+                        }
+
+                        /*animación de la barra de progreso*/
+                        .skills__design--progress__1 {
+                            animation: design-1 4s infinite cubic-bezier(1, 0, 0, 1);
+                        }
+
+                        .skills__design--progress__2 {
+                            animation: design-1 3s infinite cubic-bezier(1, 1, 0, 1);
+                        }
+
+                        .skills__design--progress__3 {
+                            animation: design-1 1s infinite cubic-bezier(1, 0, 0, 1);
+                        }
+
+                        .skills__coding--progress__1 {
+                            animation: design-1 1s infinite cubic-bezier(1, 0, 1, 1);
+                        }
+
+                        .skills__coding--progress__2 {
+                            animation: design-1 5s infinite cubic-bezier(1, 1, 0, 1);
+                        }
+
+                        .skills__coding--progress__3 {
+                            animation: design-1 3s infinite cubic-bezier(0, 1, 1, 0);
+                        }
+
+        /* Testimonials Section */
+        section#testimonials {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+
+            padding: 1vw;
+            background-color: var(--secundary-color);
+        }
         
+        .testimonials__card {
+            padding: 1vw;
+            width: 100%;
+
+            position: relative;
+        }       
+            .testimonials__card--img,
+            .testimonials__card--img > img {
+                width: 100%;
+            }
+
+            .testimonials__card--img:hover + .testimonials__card--content,
+            .testimonials__card--content:hover {
+                display: block;
+            }
+
+            .testimonials__card--content {
+                display: none;
+                position: absolute;
+                bottom: 5%;
+                left: 0;
+                    
+                padding: 15px;
+                width: 80%;
+                    
+                color: white;
+                background-color: var(--tertiary-modified);
+            }
+
+                       
+                .testimonials__card--content__title,
+                .testimonials__card--content__para {
+                    margin: 0;
+                }
+                        
+                .testimonials__card--content__title {
+                    text-transform: uppercase;
+                    margin-bottom: 0.5rem;
+                    font-size: 2vw;
+                }
+                        
+                .testimonials__card--content__para {
+                    font-size: 1vw;
+                    font-family: 'Indie Flower';
+                }
+
+@media only screen and (min-width: 900px) {
+    section#about > div {
+        flex-grow: 1;
+    }
+
+    section#skills,
+    section#testimonials {
+        flex-direction: row;
+    }
+
+    .testimonials__card {
+        width: 45vw;
+    }
+
+    .testimonials__card--img > img {
+        width: 100%;
+    }
+}
