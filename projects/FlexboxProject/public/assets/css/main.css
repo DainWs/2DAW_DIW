@@ -410,73 +410,134 @@ body {
         section#testimonials {
             display: flex;
             flex-wrap: wrap;
-            flex-direction: column;
+            align-items: stretch;
+            justify-content: center;
 
             padding: 1vw;
             background-color: var(--secundary-color);
         }
         
-        .testimonials__card {
-            padding: 1vw;
-            width: 100%;
+            .testimonials__card {
+                padding: 1vw;
+                flex-basis: 70vh;
+                flex-grow: 1;
 
-            position: relative;
-        }       
-            .testimonials__card--img,
-            .testimonials__card--img > img {
-                width: 100%;
-            }
-
-            .testimonials__card--img:hover + .testimonials__card--content,
-            .testimonials__card--content:hover {
-                display: block;
-            }
-
-            .testimonials__card--content {
-                display: none;
-                position: absolute;
-                bottom: 5%;
-                left: 0;
-                    
-                padding: 15px;
-                width: 80%;
-                    
-                color: white;
-                background-color: var(--tertiary-modified);
-            }
-
-                       
-                .testimonials__card--content__title,
-                .testimonials__card--content__para {
-                    margin: 0;
+                overflow: hidden;
+                position: relative;
+            }       
+                .testimonials__card--img,
+                .testimonials__card--img > img {
+                    width: 100%;
+                    height: 100%;
                 }
-                        
-                .testimonials__card--content__title {
-                    text-transform: uppercase;
-                    margin-bottom: 0.5rem;
-                    font-size: 2vw;
+
+                .testimonials__card--img:hover + .testimonials__card--content,
+                .testimonials__card--content:hover {
+                    display: block;
                 }
+
+                .testimonials__card--content {
+                    display: none;
+                    position: absolute;
+                    top: 60%;
+                    left: 0;
                         
-                .testimonials__card--content__para {
-                    font-size: 1vw;
+                    padding: 15px;
+                    width: 80%;
+                        
+                    color: white;
+                    background-color: var(--tertiary-modified);
+                }
+
+                        
+                    .testimonials__card--content__title,
+                    .testimonials__card--content__para {
+                        margin: 0;
+                    }
+                            
+                    .testimonials__card--content__title {
+                        text-transform: uppercase;
+                        margin-bottom: 0.5rem;
+                        font-size: 2vw;
+                    }
+                            
+                    .testimonials__card--content__para {
+                        font-size: 1vw;
+                        font-family: 'Indie Flower';
+                    }
+        /* Testimonials Section */
+        section#contact {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+
+            background-image: url('../img/full-bg-03.jpg');
+            background-repeat: no-repeat;
+            background-clip: content-box;
+            background-size: cover;
+        }
+
+            .contact__card {
+                flex-basis: 40vw;
+                flex-grow: 1;
+
+                margin-top: 40vh;
+
+                display: flex;
+                flex-direction: column;
+
+                height: 60%;
+            }
+
+            .contact__card > div {
+                height: 5rem;
+            }
+
+                .contact__card > div > input,
+                .contact__card > div > textarea {
+                    outline: none;
+                    border: 2px solid var(--secundary-modified);
+                    border-width: 0 0 2px 0;
+                    padding: 2rem;
+                    width: 100%;
+                    height: 100%;
+
                     font-family: 'Indie Flower';
+                    font-size: 2rem;
+                    
+                    color: white;
+                    background-color: var(--tertiary-modified);
                 }
+
+                .contact__card > .contact__card--message {
+                    flex-grow: 1;
+                    height: 20vh;
+                }
+
+                .contact__card > div > input[type=submit] {
+                    font-family: 'Indie Flower';
+                    line-height: 2rem;
+                    border-width: 0 0 0 0;
+                }
+
+                .contact__card--submit:hover, 
+                input[type=submit]:hover {
+                    cursor: pointer;
+                    color: gray;
+                }
+
+@media only screen and (min-width: 425px) {
+    .contact__card {
+        flex-grow: unset;
+    }
+}
 
 @media only screen and (min-width: 900px) {
     section#about > div {
         flex-grow: 1;
     }
 
-    section#skills,
-    section#testimonials {
+    section#skills {
         flex-direction: row;
-    }
-
-    .testimonials__card {
-        width: 45vw;
-    }
-
-    .testimonials__card--img > img {
-        width: 100%;
     }
 }
