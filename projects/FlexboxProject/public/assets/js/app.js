@@ -5,9 +5,9 @@ window.onload = () => {
 
   hamburger.addEventListener("click", () => {
   hamburgerContainer.classList.toggle("clicked");
-  //  links.forEach((link) => {
-  //    link.classList.toggle("fade");
-  //  });
+    links.forEach((link) => {
+      link.classList.toggle("fade");
+    });
   });
 
 }
