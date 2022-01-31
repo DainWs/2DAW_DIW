@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    /* Colores primarios */
+    --primary: #730039;
+    --primary-light: hsla(330, 100%, 23%, 0.55);
+    --primary-dark: hsla(330, 100%, 23%, 0.85);
+    /* Colores secundarios */
+    --secondary: #ffc513; 
+    --secondary-light: hsla(45, 100%, 54%, 0.55);
+    --secondary-dark: rgba(255, 196, 19, 0.85);
+    /* Colores terciarios */
+    --tertiary: #ff724c;
+    --tertiary-light: hsla(13, 100%, 65%, 0.55);
+    --tertiary-dark: rgba(255, 115, 76, 0.85);
+    /* Colores cuaternarios */
+    --quaternary: #f6eedf;
+    --quaternary-light: hsla(39, 56%, 92%, 0.55);
+    --quaternary-dark: hsla(39, 56%, 92%, 0.85);
+}
+
+body {
+    font-family: 'Titillium Web';
+    line-height: 1.8;
+    background-color: ;
+}
