@@ -37,22 +37,29 @@ body {
 
     /* Header (Menu) */
     header#header {
-        z-index: 10;
-        position: absolute;
-        width:0vw;
-        height: 5vw;
-        background-color: var(--secundary-color);
-    }
+        width: 100vw;
+        height: 100vh;
 
-        nav#header__main-nav {
-            width: 30rem;
-            height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+        nav#header__nav {
             position: fixed;
-            top: 0;
-            right: -30rem;
-            background-color: var(--secundary-color);
-            text-align: center;
         }
+
+        nav#header__nav ul {
+            width: 100vw;
+            height: 100vh;
+            background-color: var(--secondary-light);
+        }
+
+        #header__logo {
+            height: 5vh;
+        }
+
+            #header__logo > img {
+                height: auto;
+            }
 
             .clicked {
                 left: 55%; 
@@ -77,14 +84,14 @@ body {
                 transition: all 0.4s ease-in-out;
             }
 
-            .header__main-nav--hamburger {
+            .header__nav--hamburger {
                 width: 5rem;
                 height: 5rem;
                 position: fixed;
                 top: 2rem;
-                right: 3rem;
+                left: 3rem;
                 cursor: pointer;
-                background-color: var(--secundary-color);
+                background-color: var(--secondary);
                 padding: 1rem;
                 border-radius: 50%;
             
@@ -93,48 +100,48 @@ body {
                 justify-content: space-around;
             }
 
-                ul.header__main-nav--links {
+                ul.header__nav--links {
                     flex-direction: column;
                     justify-content: center;
                     align-items: flex-start;
                 }
   
-                    ul.header__main-nav--links li {
+                    ul.header__nav--links li {
                         margin-bottom: 4vh;
                         margin-left: 6vw;
 
                         opacity: 0;
                     }
   
-                    ul.header__main-nav--links li:nth-child(1) {
+                    ul.header__nav--links li:nth-child(1) {
                         transition: all 0.5s ease-in-out 0.2s;
                     }
                 
-                    ul.header__main-nav--links li:nth-child(2) {
+                    ul.header__nav--links li:nth-child(2) {
                         transition: all 0.5s ease-in-out 0.4s;
                     }
                 
-                    ul.header__main-nav--links li:nth-child(3) {
+                    ul.header__nav--links li:nth-child(3) {
                         transition: all 0.5s ease-in-out 0.6s;
                     }
                 
-                    ul.header__main-nav--links li:nth-child(4) {
+                    ul.header__nav--links li:nth-child(4) {
                         transition: all 0.5s ease-in-out 0.8s;
                     }
                 
-                    ul.header__main-nav--links li:nth-child(5) {
+                    ul.header__nav--links li:nth-child(5) {
                         transition: all 0.5s ease-in-out 1s;
                     }
                 
-                    ul.header__main-nav--links li:nth-child(6) {
+                    ul.header__nav--links li:nth-child(6) {
                         transition: all 0.5s ease-in-out 1.2s;
                     }
 
-                        ul.header__main-nav--links li.fade { 
+                        ul.header__nav--links li.fade { 
                             opacity: 1;
                         }
 
-            ul.header__main-nav--links {                
+            ul.header__nav--links {                
                 width: 100%;
                 height: 100%;
             
@@ -143,18 +150,18 @@ body {
                 align-items: center;
             }
 
-                ul.header__main-nav--links li {
+                ul.header__nav--links li {
                     padding-right: 3vw;
                 }
 
-                    ul.header__main-nav--links li a {
+                    ul.header__nav--links li a {
                         position: relative;
                         padding: 0.2rem 0.6rem;
                         font-size: calc(1rem + 0.66667vw);
                     }
 
-                    ul.header__main-nav--links li a:link::before,
-                    ul.header__main-nav--links li a:visited::before {
+                    ul.header__nav--links li a:link::before,
+                    ul.header__nav--links li a:visited::before {
                         content: "";
                         position: absolute;
                         left: 0;
@@ -167,22 +174,22 @@ body {
                         transition: transform 0.6s ease-in-out;
                     }
 
-                    ul.header__main-nav--links li a:link::before,
-                    ul.header__main-nav--links li a:visited::before {
+                    ul.header__nav--links li a:link::before,
+                    ul.header__nav--links li a:visited::before {
                         top: 0;
                         transform-origin: left;
                     }
 
-                    ul.header__main-nav--links li a:link::after,
-                    ul.header__main-nav--links li a:visited::after {
+                    ul.header__nav--links li a:link::after,
+                    ul.header__nav--links li a:visited::after {
                         bottom: 0;
                         transform-origin: right;
                     }
 
-                    ul.header__main-nav--links li a:hover::before,
-                    ul.header__main-nav--links li a:active::before,
-                    ul.header__main-nav--links li a:hover::after,
-                    ul.header__main-nav--links li a:active::after {
+                    ul.header__nav--links li a:hover::before,
+                    ul.header__nav--links li a:active::before,
+                    ul.header__nav--links li a:hover::after,
+                    ul.header__nav--links li a:active::after {
                         transform: scaleX(1);
                     }
 
