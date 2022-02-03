@@ -1,0 +1,125 @@
+/* Fuente: Raleway normal, pesos 300, 400, 700, 900 */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Raleway';
+
+    /*= Colores: #FFF blanco, #111111 negro, #343A40 gris =*/
+    --white: #FFF;
+    --black: #111111;
+    --gray: #343A40;
+}
+
+/*** Body ***/
+body {
+    padding: 5vw;
+    /*= Ocupa el 90% del alto de la vista =*/
+    height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    color: var(--white);
+    background: 
+        url(../images/hero.jpg)
+        no-repeat;
+    background-size: cover;
+}
+
+    /** Header **/
+    #header {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+        /* Header title */
+        #header > h1 {
+            margin-bottom: 5vh;
+
+            text-align: center;
+            font-size: 2rem;
+            font-weight: normal;
+        }
+
+            #header > h1 > span {
+                font-weight: bold;
+            }
+
+        /* Header nav */
+        .header__nav {
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+        }
+            /* Header menu-item */
+            .header__nav li {
+                list-style-type: none;
+            }
+
+                .header__nav li a {
+                    padding: 1rem;
+
+                    text-decoration: none;
+                    color: var(--white);
+                }
+
+                /*= Efecto hover en el enlace del menú: 
+                 *=   fondo: blanco transparente (50%), texto negro
+                 */
+                .header__nav li a:hover {
+                    opacity: 0.5;
+                    color: var(--black);
+                    background-color: var(--white);
+                }
+
+    /** Footer **/
+    #footer {
+        font-size: 1.5rem;
+        align-self: flex-end;
+    }
+        #footer > p {
+            text-align: right;
+            font-size: 1rem;
+        }
+
+/*** Media Queries ***/
+/*= Puntos de ruptura 780px y 1000px =*/
+@media only screen and (max-width: 780px) {
+    /* Header nav */
+    .header__nav {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+        .header__nav li { margin: 1vh; }
+
+    /* Footer */
+    #footer { align-self: center; }
+
+        #footer > p { text-align: center; }
+}
+
+@media only screen and (min-width: 1000px) {
+    /* Header */
+    #header {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: unset;
+    }
+
+        #header > h1 {
+            text-align: left;
+            margin-bottom: 0;
+        }
+}

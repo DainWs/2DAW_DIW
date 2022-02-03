@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body */
+body {
+    /*= El alto del contenedor grid es igual al alto de la vista =*/
+    height: 100vh;
+
+    /*= Herramienta: grid =*/
+    display: grid;
+    /*= Todas las filas y columnas están separadas 10px =*/
+    grid-gap: 10px;
+    grid-template-areas: "header header"
+        "nav article"
+        "nav abs"
+        "footer footer";
+
+    /*= En desktop: 
+     *=   El alto de header y footer es 80px y 70px respectivamente.
+     *=   Article es el  doble de Ads.  
+     */
+    grid-template-rows: 80px 2fr 1fr 70px;
+    grid-template-columns: 30vw auto;
+}
+    /* Sections */
+    body > *{
+        /*= Todas las secciones tienen un relleno de 19,2px (debes pasar a rem) y un mismo color de fondo =*/
+        padding: 1.2rem;
+        background-color: greenyellow;
+    }
+
+    /* Sections Areas */
+    body > header { grid-area: header; }
+    body > nav { grid-area: nav; }
+    body > article { grid-area: article; }
+    body > article.abs { grid-area: abs; }
+    body > footer { grid-area: footer; }
+
+/*** Media Queries ***/
+/*= Punto de ruptura: 575px =*/
+/*= En vistas pequeñas, móvil: 
+ *=      header, nav y footer tienen un alto de 80px, 70px y 70px respectivamente.
+ *=      Article es el doble de Ads.
+ */
+@media only screen and (max-width: 575px) {
+    body {
+        grid-template-rows: 80px 70px 2fr 1fr 70px;
+        grid-template-columns: 1fr;
+        grid-template-areas: "header" "nav" "article" "abs" "footer";
+    }
+}
