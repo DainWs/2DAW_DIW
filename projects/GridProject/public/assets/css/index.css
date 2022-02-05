@@ -189,7 +189,7 @@ body {
     /* Main */
     main {
         display: grid;
-        grid-template-rows: 100vh 70vh 70vh 70vh;
+        grid-template-rows: 100vh 2fr auto 1fr 1fr 2fr 1fr 1fr;
     }
         /* Hero section */
         section#hero {
@@ -198,43 +198,159 @@ body {
 
         /* Sites section */
         section#villas {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            row-gap: 2vw;
+            column-gap: 2vw;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 30vw);
         }
 
             section#villas > article {
-                flex: 1 1 30vw;
                 padding: 2.5%;
 
+                position: relative;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
 
+                color: white;
                 background-size: cover;
                 background-position: center;
-                background-color: var(--primary-light);
+                background-blend-mode: multiply;
             }
 
-            #villas__standart {
-                background-image: url('../images/Villas/villa-1.jpg');
+                section#villas > article h2 {
+                    text-transform: uppercase;
+                    font-size: calc(1.5rem + 2vw);
+                    font-weight: normal;
+                }
+
+                section#villas > article p {
+                    font-size: calc(0.5rem + 1vw);
+                }
+
+                section#villas > article span {
+                    padding: 1vw;
+                    width: fit-content;
+
+                    color: var(--primary);
+                    font-size: calc(0.2rem + 1vw);
+                    background-color: white;
+                }
+
+                    section#villas > article span:hover {
+                        cursor: pointer;
+                    }
+
+                        #villas__standart {
+                            background-image: url(../images/Villas/villa-1.jpg), linear-gradient(180deg, var(--primary-light) 0%, var(--secondary-light) 100%);
+                        }
+
+                        #villas__superior {
+                            background-image: url('../images/Villas/villa-2.jpg'), linear-gradient(180deg, var(--primary-light) 0%, var(--secondary-light) 100%);
+                        }
+
+                        #villas__infinity {
+                            background-image: url('../images/Villas/villa-3.jpg'), linear-gradient(180deg, var(--primary-light) 0%, var(--secondary-light) 100%);
+                        }
+
+                        #villas__ultra {
+                            background-image: url('../images/Villas/villa-4.jpg'), linear-gradient(180deg, var(--primary-light) 0%, var(--secondary-light) 100%);
+                        }
+
+                        #villas__galactic {
+                            background-image: url('../images/Villas/villa-5.jpg'), linear-gradient(180deg, var(--primary-light) 0%, var(--secondary-light) 100%);
+                        }
+
+                        #villas__cosmic {
+                            background-image: url('../images/Villas/villa-6.jpg'), linear-gradient(180deg, var(--primary-light) 0%, var(--secondary-light) 100%);
+                        }
+
+        section#comercial {
+            padding: 5% 15%;
+            height: min-content;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            background-color: var(--primary);
+
+            color: white;
+            text-align: center;
+        }
+
+            section#comercial h3 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                text-transform: uppercase;
+                font-size: calc(1.5rem + 2vw);
+                font-weight: normal;
             }
 
-            #villas__superior {
-                background-image: url('../images/Villas/villa-2.jpg');
+                section#comercial h3::after {
+                    width: 20%;
+                    height: 2px;
+                    content: " ";
+                    background-color: white;
+                }
+
+            section#comercial p {
+                font-size: calc(0.5rem + 1vw);
             }
 
-            #villas__infinity {
-                background-image: url('../images/Villas/villa-3.jpg');
+        section#eventos,
+        section#feactures {
+            width: 70vw;
+
+            display: flex;
+        }
+
+            .feactures__title,
+            .eventos__title {
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
 
-            #villas__ultra {
-                background-image: url('../images/Villas/villa-4.jpg');
+                .feactures__title > *,
+                .eventos__title > * {
+                    -webkit-transform: rotate(90deg);
+                    -moz-transform: rotate(90deg);
+                    -ms-transform: rotate(90deg);
+                    -o-transform: rotate(90deg);
+                    transform: rotate(90deg);
+                }
+
+            section#feactures .feactures__item,
+            section#eventos .eventos__item {
+                padding: 15px;
             }
 
-            #villas__galactic {
-                background-image: url('../images/Villas/villa-5.jpg');
+                section#feactures h4,
+                section#eventos h4 {
+                    text-transform: uppercase;
+                    font-size: calc(1.5rem + 1vw);
+                    font-weight: normal;
+                }
+
+                section#feactures p,
+                section#eventos p {
+                    font-size: calc(0.5rem + 1vw);
+                }
+
+        section#galleries {
+            width: 70vw;
+            display: flex;
+        }
+
+            section#galleries > .galleries__media {
+                width: 100%;
             }
 
-            #villas__cosmic {
-                background-image: url('../images/Villas/villa-6.jpg');
-            }
+        footer {
+            padding: 0 30%;
+            background-color: var(--primary);
+        }
