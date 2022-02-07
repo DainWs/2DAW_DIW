@@ -11,7 +11,7 @@
 :root {
     font-size: 62.5%;
 
-    /* Colores primarios */
+    /* Colores primarios ss*/
     --primary: #730039;
     --primary-light: hsla(330, 100%, 23%, 0.55);
     --primary-dark: hsla(330, 100%, 23%, 0.85);
