@@ -196,25 +196,6 @@ body {
                         transform: scaleX(1);
                     }
 
-<<<<<<< HEAD
-    /* Main */
-    main {
-        display: grid;
-        grid-template-rows: 100vh 2fr auto 1fr 1fr 2fr 1fr 1fr;
-    }
-        /* Hero section */
-        section#hero {
-            background-image: url('../images/hero.jpg');
-        }
-
-        /* Sites section */
-        section#villas {
-            display: grid;
-            row-gap: 2vw;
-            column-gap: 2vw;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, 30vw);
-=======
         /* Header logo */
         #header__logo {
             height: 100%;
@@ -236,7 +217,6 @@ body {
             align-items: flex-start;
 
             color: white;
->>>>>>> 1a0a70e1c61022f23b19d9b2c33cdf442322bfaa
         }
             #header__presentation > h1 {
                 text-transform: uppercase;
@@ -250,12 +230,6 @@ body {
                 font-size: calc(1rem + 1.5vw);
             }
 
-<<<<<<< HEAD
-            section#villas > article {
-                padding: 2.5%;
-
-                position: relative;
-=======
             #header__presentation > a {
                 border: 2px solid var(--secondary-light);
                 border-radius: 5px;
@@ -293,7 +267,6 @@ body {
             margin: 0;
         }
             section#booking--informacion > header h2 {
->>>>>>> 1a0a70e1c61022f23b19d9b2c33cdf442322bfaa
                 display: flex;
                 flex-direction: column;
                 font-size: calc(2rem + 1vw);
