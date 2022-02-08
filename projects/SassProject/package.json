@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "node-sass": "^7.0.1",
+    "sass": "^1.49.7"
+  },
+  "name": "sassproject",
+  "version": "1.0.0",
+  "description": "Grid project with sass project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch src/scss:dist/css"
+  },
+  "author": "Jose Antonio Duarte Perez",
+  "license": "ISC"
+}
