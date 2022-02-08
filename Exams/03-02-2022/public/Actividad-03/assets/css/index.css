@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gallery section */
+section {
+    padding: 5px;
+}
+
+    /* Figure/Image of the gallery */
+    section figure {
+        width: min-content;
+        height: 200px;
+        position: relative;
+    }
+        /* After Figure */
+        section figure:hover::after {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        section figure::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            display: none;
+            content: attr(site);
+
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 300;
+            text-align: center;
+            background-color: rgba(253, 68, 68, 0.295);
+        }
+
+            /* Image */
+            section figure img {
+                height: 100%;
+            }
+
+            section figure:hover img {
+                filter: blur(1px);
+            }

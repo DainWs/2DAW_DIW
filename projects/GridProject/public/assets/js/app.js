@@ -1,7 +1,7 @@
 window.onload = () => {
-  const hamburgerContainer = document.querySelector("#header__main-nav");
-  const hamburger = document.querySelector(".header__main-nav--hamburger");
-  const links = document.querySelectorAll(".header__main-nav--links li");
+  const hamburgerContainer = document.querySelector("#header__nav");
+  const hamburger = document.querySelector(".header__nav--hamburger");
+  const links = document.querySelectorAll(".header__nav--links li");
 
   hamburger.addEventListener("click", () => {
   hamburgerContainer.classList.toggle("clicked");
