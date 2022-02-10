@@ -71,11 +71,53 @@ header#header {
   height: 100vh;
   background: linear-gradient(rgba(117, 0, 59, 0.55), rgba(117, 0, 59, 0.55)), url("assets/images/hero.jpg");
   background-size: cover;
+  /* Header logo */
+  /* Header presentation */
   /* Header nav */
+}
+header#header #header__logo {
+  height: 100%;
+  justify-self: center;
+}
+header#header #header__logo > img {
+  height: 100%;
+}
+header#header #header__presentation {
+  padding: 5vw;
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+}
+header#header #header__presentation > h1 {
+  text-transform: uppercase;
+  font-size: calc(1rem + 8vw);
+  font-weight: normal;
+}
+header#header #header__presentation > p {
+  margin: 2rem 0;
+  font-size: calc(1rem + 1.5vw);
+}
+header#header #header__presentation > a {
+  border: 2px solid var(rgba(255, 196, 20, 0.55));
+  border-radius: 5px;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+  font-size: calc(1rem + 0.5vw);
+}
+header#header #header__presentation > a :hover {
+  background-color: var(rgba(255, 196, 20, 0.55));
+}
+header#header #header__presentation > a :active {
+  background-color: var(rgba(255, 196, 19, 0.85));
 }
 header#header nav#header__nav {
   position: fixed;
   /* Hamburger menu */
+  /* Menu */
 }
 header#header nav#header__nav .header__nav--hamburger {
   width: 5rem;
@@ -99,94 +141,75 @@ header#header nav#header__nav .header__nav--hamburger .line {
   border-radius: 0.2rem;
   transition: all 0.4s ease-in-out;
 }
-
-div.line-1,
-div.line-3 {
+header#header nav#header__nav .header__nav--hamburger .line-1,
+header#header nav#header__nav .header__nav--hamburger .line-3 {
   width: 60%;
 }
-
-div.line-3 {
+header#header nav#header__nav .header__nav--hamburger .line-3 {
   margin-left: auto;
 }
-
-.clicked .line-1,
-.clicked .line-3 {
+header#header nav#header__nav .header__nav--hamburger .clicked .line-1,
+header#header nav#header__nav .header__nav--hamburger .clicked .line-3 {
   margin: 0;
   width: 100%;
 }
-
-.clicked .line-1 {
+header#header nav#header__nav .header__nav--hamburger .clicked .line-1 {
   transform: rotateZ(-405deg) translate(-1rem, 0.6rem);
 }
-
-.clicked .line-2 {
+header#header nav#header__nav .header__nav--hamburger .clicked .line-2 {
   opacity: 0;
 }
-
-.clicked .line-3 {
+header#header nav#header__nav .header__nav--hamburger .clicked .line-3 {
   transform: rotateZ(405deg) translate(-0.8rem, -0.6rem);
 }
-
-.clicked ul.header__nav--links {
+header#header nav#header__nav .header__nav--hamburger .clicked ul.header__nav--links {
   display: flex;
 }
-
-/* Menu */
-ul.header__nav--links {
+header#header nav#header__nav ul.header__nav--links {
   width: 100vw;
   height: 100vh;
-  background-color: var(--secondary-light);
+  background-color: var(rgba(255, 196, 20, 0.55));
   display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-ul.header__nav--links li {
+header#header nav#header__nav ul.header__nav--links li {
   list-style: none;
   margin: 0;
   margin-bottom: 4vh;
   opacity: 0;
 }
-
-ul.header__nav--links li:nth-child(1) {
-  transition: all 0.5s ease-in-out 0.2s;
-}
-
-ul.header__nav--links li:nth-child(2) {
-  transition: all 0.5s ease-in-out 0.4s;
-}
-
-ul.header__nav--links li:nth-child(3) {
-  transition: all 0.5s ease-in-out 0.6s;
-}
-
-ul.header__nav--links li:nth-child(4) {
-  transition: all 0.5s ease-in-out 0.8s;
-}
-
-ul.header__nav--links li:nth-child(5) {
-  transition: all 0.5s ease-in-out 1s;
-}
-
-ul.header__nav--links li:nth-child(6) {
-  transition: all 0.5s ease-in-out 1.2s;
-}
-
-ul.header__nav--links li.fade {
+header#header nav#header__nav ul.header__nav--links li .fade {
   opacity: 1;
 }
-
-ul.header__nav--links a {
+header#header nav#header__nav ul.header__nav--links li :nth-child(1) {
+  transition: all 0.5s ease-in-out 0.2s;
+}
+header#header nav#header__nav ul.header__nav--links li :nth-child(2) {
+  transition: all 0.5s ease-in-out 0.4s;
+}
+header#header nav#header__nav ul.header__nav--links li :nth-child(3) {
+  transition: all 0.5s ease-in-out 0.6s;
+}
+header#header nav#header__nav ul.header__nav--links li :nth-child(4) {
+  transition: all 0.5s ease-in-out 0.8s;
+}
+header#header nav#header__nav ul.header__nav--links li :nth-child(5) {
+  transition: all 0.5s ease-in-out 1s;
+}
+header#header nav#header__nav ul.header__nav--links li :nth-child(6) {
+  transition: all 0.5s ease-in-out 1.2s;
+}
+header#header nav#header__nav ul.header__nav--links li a {
   position: relative;
   padding: 0.2rem 0.6rem;
   text-decoration: none;
   color: white;
   font-size: calc(1rem + 0.66667vw);
 }
-
-ul.header__nav--links li a:link::before,
-ul.header__nav--links li a:visited::before {
+header#header nav#header__nav ul.header__nav--links li a ::before :link,
+header#header nav#header__nav ul.header__nav--links li a ::before :visited {
   content: "";
   position: absolute;
   left: 0;
@@ -195,74 +218,21 @@ ul.header__nav--links li a:visited::before {
   background-color: white;
   transform: scaleX(0);
   transition: transform 0.6s ease-in-out;
-}
-
-ul.header__nav--links li a:link::before,
-ul.header__nav--links li a:visited::before {
   top: 0;
   transform-origin: left;
 }
-
-ul.header__nav--links li a:link::after,
-ul.header__nav--links li a:visited::after {
+header#header nav#header__nav ul.header__nav--links li a ::before :hover,
+header#header nav#header__nav ul.header__nav--links li a ::before :active {
+  transform: scaleX(1);
+}
+header#header nav#header__nav ul.header__nav--links li a ::after :link,
+header#header nav#header__nav ul.header__nav--links li a ::after :visited {
   bottom: 0;
   transform-origin: right;
 }
-
-ul.header__nav--links li a:hover::before,
-ul.header__nav--links li a:active::before,
-ul.header__nav--links li a:hover::after,
-ul.header__nav--links li a:active::after {
+header#header nav#header__nav ul.header__nav--links li a ::after :hover,
+header#header nav#header__nav ul.header__nav--links li a ::after :active {
   transform: scaleX(1);
-}
-
-/* Header logo */
-#header__logo {
-  height: 100%;
-  justify-self: center;
-}
-
-#header__logo > img {
-  height: 100%;
-}
-
-/* Header presentation */
-#header__presentation {
-  padding: 5vw;
-  width: 100%;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  color: white;
-}
-
-#header__presentation > h1 {
-  text-transform: uppercase;
-  font-size: calc(1rem + 8vw);
-  font-weight: normal;
-}
-
-#header__presentation > p {
-  margin: 2rem 0;
-  font-size: calc(1rem + 1.5vw);
-}
-
-#header__presentation > a {
-  border: 2px solid var(--secondary-light);
-  border-radius: 5px;
-  padding: 1rem;
-  color: white;
-  text-decoration: none;
-  font-size: calc(1rem + 0.5vw);
-}
-
-#header__presentation > a:hover {
-  background-color: var(--secondary-light);
-}
-
-#header__presentation > a:active {
-  background-color: var(--secondary-dark);
 }
 
 /*=== Booking informacion Section ===*/
