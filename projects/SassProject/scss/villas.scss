@@ -1,0 +1,7 @@
+/*=== Sites section ===*/
+section#villas {
+    @include grid-section-size(12);
+    @include grid-container(2vw);
+    grid-template-rows: repeat(2, 30vw);
+    grid-template-columns: repeat(3, 1fr);
+}

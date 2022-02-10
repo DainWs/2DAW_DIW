@@ -1,0 +1,12 @@
+/*== Footer section ==*/ 
+footer#footer {
+    @include grid-section-size(12);
+    @include grid-container();
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr auto auto auto auto;
+    padding: 2% 15%;
+
+    color: $primary-text;
+    font-size: $fontSize-paragraph;
+    background-color: $primary;
+}

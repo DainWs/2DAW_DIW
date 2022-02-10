@@ -1,0 +1,10 @@
+/*** Animations ***/
+@keyframes menu-show {
+    0% { left: 60vw; transform: rotateZ(360deg);}
+    100% { left: 3rem; transform: rotateZ(0deg);}
+}
+
+@keyframes testimonials {
+    0% {transform: rotateY(0deg);}
+    100% { transform: rotateY(180deg);}
+}

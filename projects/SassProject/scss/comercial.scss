@@ -1,0 +1,13 @@
+/*== Comercial section ==*/ 
+section#comercial {
+    @include grid-section-size(12);
+    @include grid-container;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+
+    padding: 5% 15%;
+    
+    text-align: center;
+    color: $primary-text;
+    background-color: $primary;
+}

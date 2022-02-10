@@ -1,0 +1,20 @@
+/*** Mixins ***/
+@mixin grid-container($gap: 0) {
+    display: grid;
+    row-gap: $gap;
+    column-gap: $gap;
+}
+
+@mixin grid-section-size($num-columns: 1, $num-rows: 1, $start-column: -1, $start-row: -1) {
+    @if $start-row == -1 {
+        grid-row: span $num-rows;
+    } @else {
+        grid-row: $start-row / span $num-rows;
+    }
+
+    @if $start-column == -1 {
+        grid-column: span $num-columns;    
+    } @else {
+        grid-column: $start-column / span $num-columns;    
+    }
+}

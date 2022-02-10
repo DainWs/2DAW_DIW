@@ -1,0 +1,7 @@
+/*== Eventos section ==*/ 
+section#eventos {
+    @include grid-section-size(10);
+    @include grid-container;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 2fr 1fr;
+}

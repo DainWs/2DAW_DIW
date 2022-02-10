@@ -1,19 +1,22 @@
-// Definicion
-// Variables globales
+/*** Imports ***/
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
-/* Colores primarios */
-$primary: #730039;
-$primary-light: hsla(330, 100%, 23%, 0.55);
-$primary-dark: hsla(330, 100%, 23%, 0.85);
-/* Colores secundarios */
-$secondary: #ffc513; 
-$secondary-light: hsla(45, 100%, 54%, 0.55);
-$secondary-dark: rgba(255, 196, 19, 0.85);
-/* Colores terciarios */
-$tertiary: #ff724c;
-$tertiary-light: hsla(13, 100%, 65%, 0.55);
-$tertiary-dark: rgba(255, 115, 76, 0.85);
-/* Colores cuaternarios */
-$quaternary: #f6eedf;
-$quaternary-light: hsla(39, 56%, 92%, 0.55);
-$quaternary-dark: hsla(39, 56%, 92%, 0.85);
+/*** Utils ***/
+@import "scss/utils/variables.scss";
+@import "scss/utils/animations.scss";
+@import "scss/utils/placeholders.scss";
+@import "scss/utils/mixins.scss";
+@import "scss/utils/functions.scss";
+@import "scss/utils/resets.scss";
+
+/*** Styles ***/
+@import "scss/body.scss";
+@import "scss/header.scss";
+@import "scss/booking.scss";
+@import "scss/villas.scss";
+@import "scss/comercial.scss";
+@import "scss/events.scss";
+@import "scss/galleries.scss";
+@import "scss/feactures.scss";
+@import "scss/testimonials.scss";
+@import "scss/footer.scss";

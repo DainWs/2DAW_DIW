@@ -1,0 +1,13 @@
+/*== Body ==*/
+body {
+    @include grid-container;
+    grid-template-rows: 100vh 50vh repeat(2, minmax(auto, min-content)) 1fr 3fr 1fr 100vh minmax(auto, min-content);
+    grid-template-columns: repeat(12, 1fr);
+    
+    width: 100vw;
+
+    overflow-x: hidden;
+    line-height: 1.8;
+    font-family: $fontFamily-primary;
+    background-color: $quaternary;
+}
