@@ -106,7 +106,7 @@ header#header #header__presentation > a {
   padding: 1rem;
   color: white;
   text-decoration: none;
-  font-size: calc(1rem + 0.5vw);
+  font-size: calc(1rem + 0.66667vw);
 }
 header#header #header__presentation > a :hover {
   background-color: var(rgba(255, 196, 20, 0.55));
@@ -126,7 +126,7 @@ header#header nav#header__nav .header__nav--hamburger {
   top: 2rem;
   left: 3rem;
   cursor: pointer;
-  background-color: var(--secondary);
+  background-color: #ffc513;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -148,27 +148,27 @@ header#header nav#header__nav .header__nav--hamburger .line-3 {
 header#header nav#header__nav .header__nav--hamburger .line-3 {
   margin-left: auto;
 }
-header#header nav#header__nav .header__nav--hamburger .clicked .line-1,
-header#header nav#header__nav .header__nav--hamburger .clicked .line-3 {
+header#header nav#header__nav.clicked .line-1,
+header#header nav#header__nav.clicked .line-3 {
   margin: 0;
   width: 100%;
 }
-header#header nav#header__nav .header__nav--hamburger .clicked .line-1 {
+header#header nav#header__nav.clicked .line-1 {
   transform: rotateZ(-405deg) translate(-1rem, 0.6rem);
 }
-header#header nav#header__nav .header__nav--hamburger .clicked .line-2 {
+header#header nav#header__nav.clicked .line-2 {
   opacity: 0;
 }
-header#header nav#header__nav .header__nav--hamburger .clicked .line-3 {
+header#header nav#header__nav.clicked .line-3 {
   transform: rotateZ(405deg) translate(-0.8rem, -0.6rem);
 }
-header#header nav#header__nav .header__nav--hamburger .clicked ul.header__nav--links {
+header#header nav#header__nav.clicked ul.header__nav--links {
   display: flex;
 }
 header#header nav#header__nav ul.header__nav--links {
   width: 100vw;
   height: 100vh;
-  background-color: var(rgba(255, 196, 20, 0.55));
+  background-color: rgba(255, 196, 20, 0.55);
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -180,25 +180,25 @@ header#header nav#header__nav ul.header__nav--links li {
   margin-bottom: 4vh;
   opacity: 0;
 }
-header#header nav#header__nav ul.header__nav--links li .fade {
+header#header nav#header__nav ul.header__nav--links li.fade {
   opacity: 1;
 }
-header#header nav#header__nav ul.header__nav--links li :nth-child(1) {
+header#header nav#header__nav ul.header__nav--links li:nth-child(1) {
   transition: all 0.5s ease-in-out 0.2s;
 }
-header#header nav#header__nav ul.header__nav--links li :nth-child(2) {
+header#header nav#header__nav ul.header__nav--links li:nth-child(2) {
   transition: all 0.5s ease-in-out 0.4s;
 }
-header#header nav#header__nav ul.header__nav--links li :nth-child(3) {
+header#header nav#header__nav ul.header__nav--links li:nth-child(3) {
   transition: all 0.5s ease-in-out 0.6s;
 }
-header#header nav#header__nav ul.header__nav--links li :nth-child(4) {
+header#header nav#header__nav ul.header__nav--links li:nth-child(4) {
   transition: all 0.5s ease-in-out 0.8s;
 }
-header#header nav#header__nav ul.header__nav--links li :nth-child(5) {
+header#header nav#header__nav ul.header__nav--links li:nth-child(5) {
   transition: all 0.5s ease-in-out 1s;
 }
-header#header nav#header__nav ul.header__nav--links li :nth-child(6) {
+header#header nav#header__nav ul.header__nav--links li:nth-child(6) {
   transition: all 0.5s ease-in-out 1.2s;
 }
 header#header nav#header__nav ul.header__nav--links li a {
@@ -208,8 +208,7 @@ header#header nav#header__nav ul.header__nav--links li a {
   color: white;
   font-size: calc(1rem + 0.66667vw);
 }
-header#header nav#header__nav ul.header__nav--links li a ::before :link,
-header#header nav#header__nav ul.header__nav--links li a ::before :visited {
+header#header nav#header__nav ul.header__nav--links li a:link::before, header#header nav#header__nav ul.header__nav--links li a:visited::before {
   content: "";
   position: absolute;
   left: 0;
@@ -221,17 +220,11 @@ header#header nav#header__nav ul.header__nav--links li a ::before :visited {
   top: 0;
   transform-origin: left;
 }
-header#header nav#header__nav ul.header__nav--links li a ::before :hover,
-header#header nav#header__nav ul.header__nav--links li a ::before :active {
-  transform: scaleX(1);
-}
-header#header nav#header__nav ul.header__nav--links li a ::after :link,
-header#header nav#header__nav ul.header__nav--links li a ::after :visited {
+header#header nav#header__nav ul.header__nav--links li a:link::before, header#header nav#header__nav ul.header__nav--links li a:visited::before {
   bottom: 0;
   transform-origin: right;
 }
-header#header nav#header__nav ul.header__nav--links li a ::after :hover,
-header#header nav#header__nav ul.header__nav--links li a ::after :active {
+header#header nav#header__nav ul.header__nav--links li a:hover::before, header#header nav#header__nav ul.header__nav--links li a:hover::after, header#header nav#header__nav ul.header__nav--links li a:active::before, header#header nav#header__nav ul.header__nav--links li a:active::after {
   transform: scaleX(1);
 }
 
