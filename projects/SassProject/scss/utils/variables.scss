@@ -27,3 +27,20 @@ $fontSize-default: 62.5%;
 $fontSize-headers: calc(1rem + 8vw);
 $fontSize-paragraph: calc(1rem + 1.5vw);
 $fontSize-links: calc(1rem + 0.66667vw);
+
+
+$font-primary: 'Titillium Web';
+$Size: (
+    default: 62.5%,
+    titles: calc(2rem + 2vw)
+);
+$size-default: 62.5%;
+$size-min: 2rem;
+$size-xxlarge: calc(($size-min*2) + 4vw);
+$size-xlarge: calc($size-min + 2vw);
+$size-large: calc(($size-min/2) + 2vw);
+$size-big: calc(($size-min/2) + 1vw);
+$size-normal: calc(($size-min/4) + 1vw);
+
+/*** Sections ***/
+$sectionsPadding: 8vh 3vw;

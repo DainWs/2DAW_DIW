@@ -3,10 +3,25 @@ footer#footer {
     @include grid-section-size(12);
     @include grid-container();
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr auto auto auto auto;
-    padding: 2% 15%;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    padding: 6vh 4vw;
 
     color: $primary-text;
     font-size: $fontSize-paragraph;
     background-color: $primary;
+
+    .footer__div a {
+        display: inline-block;
+        margin-right: 1rem;
+        border-radius: 4rem;
+        background-color: $secondary;
+        animation: social 3s linear infinite;
+        transform: scale(0.8);
+
+        &.footer__div--link i {
+            font-size: 2rem;
+            color: $primary;
+        }
+    }
 }

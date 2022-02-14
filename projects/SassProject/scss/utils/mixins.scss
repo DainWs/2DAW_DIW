@@ -18,3 +18,51 @@
         grid-column: $start-column / span $num-columns;    
     }
 }
+
+@mixin wide-section($backgroundColor) {
+    @include grid-section-size(11);
+    @include grid-container;
+    grid-template-rows: 1fr;
+
+    .item {
+        @include grid-container;
+        grid-template-rows: min-content auto;
+        grid-row-gap: 4vh;
+        align-items: center;
+        justify-items: start;
+        padding: 8vh 3vw;
+
+        h2 {
+            color: $primary-text;
+            font-size: $size-xlarge;
+            font-weight: 400;
+        }
+
+        p {
+            color: $primary-text;
+            font-size: $size-big;
+            font-weight: 500;
+        }
+    }
+
+    .media,
+    .media * {
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .title {
+        @include grid-section-size(1, 1, 3);
+        @include grid-container;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        place-items: center;
+        background-color: $backgroundColor;
+
+        * {
+            color: $primary-text;
+            font-size: $size-xlarge;
+            font-weight: 500;
+        }
+    }
+}

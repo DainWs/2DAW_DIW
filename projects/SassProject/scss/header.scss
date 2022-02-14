@@ -1,61 +1,68 @@
 /*=== Headers (Menu) ===*/
 header#header {
     @include grid-section-size(12);
-    @include grid-container;
-    grid-template-rows: 5rem auto;
-    grid-template-columns: 1fr;
 
     height: 100vh;
 
     background: inkImage('assets/images/hero.jpg', $primary-light, $primary-light);
     background-size: cover;
-
-    /* Header logo */
-    #header__logo {
-        height: 100%;
-        justify-self: center;
-
-        > img { height: 100%; }
-    }
-
-    /* Header presentation */
-    #header__presentation {
-        padding: 5vw;
-        width: 100%;
-        flex-grow: 1;
-
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-
-        color: $primary-text;
-
-        > h1 {
-            text-transform: uppercase;
-            font-size: $fontSize-headers;
-            font-weight: normal;
-        }
-
-        > p {
-            margin: 2rem 0;
-            font-size: $fontSize-paragraph;
-        }
-
-        > a {
-            border: 2px solid var($secondary-light);
-            border-radius: 5px;
-            padding: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
     
-            color: $primary-text;
-            text-decoration: none;
-            font-size: $fontSize-links;
+    /* Header Content */
+    #header__content {
+        display: grid;
+        grid-template-columns: 1fr minmax(30rem, 1fr) 1fr;
+        grid-template-rows: min-content;
+        justify-items: center;
+        height: 90%;
 
-            :hover {
-                background-color: var($secondary-light);
+        /* Header logo */
+        .header__content--logo {
+            grid-column: 2/3;
+        }
+
+        /* Header presentation */
+        .header__content--presentation {
+            grid-column: 1/-1;
+            align-self: center;
+
+            & > h1 {
+                padding: 0 $size-min 0 $size-xlarge;
+                text-transform: uppercase;
+                color: $primary-text;
+                font-size: $size-xxlarge;
+                font-weight: 400;
             }
 
-            :active {
-                background-color: var($secondary-dark);
+            & > p {
+                padding: 3vh $size-min 5vh $size-xlarge;
+                font-weight: 500;
+                font-size: $size-large;
+            }
+
+            & > a {
+                margin-left: $size-large;
+                border: 0.2rem solid $tertiary-light;
+                border-radius: 5px;
+
+                &::before {
+                    content: "";
+                    z-index: -1;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $tertiary;
+                    transform: scaleX(0);
+                    transition: transform 0.45s cubic-bezier(1, 0, 0, 1);
+                }
+
+                &:hover::before,
+                &:active::before { 
+                    transform: scaleX(1);
+                }
             }
         }
     }
@@ -158,18 +165,19 @@ header#header {
                     &:visited::before {
                         content: "";
                         position: absolute;
+                        top: 0;
                         left: 0;
+
                         width: 100%;
                         height: 0.25rem;
-                        background-color: $primary-text;
                         
                         transform: scaleX(0);
-                        
+                        transform-origin: left;                        
                         transition: transform 0.6s ease-in-out;
 
-                        top: 0;
-                        transform-origin: left;
+                        background-color: $primary-text;
                     }
+
                     &:link::before,
                     &:visited::before {
                         bottom: 0;

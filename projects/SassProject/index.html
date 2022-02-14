@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="dist/app.css">
+  <link rel="shortcut icon" type="image/svg" href="assets/images/hotel-solid.svg" />
   <script src="assets/js/app.js"></script>
   <script src="https://kit.fontawesome.com/4070cfc028.js" crossorigin="anonymous"></script>
   <title></title>
@@ -25,213 +26,228 @@
 
       <!--menú navegación -->
       <ul class="header__nav--links">
-        <li>
-          <a href="#home">Home</a>
-        </li>
-        <li>
-          <a href="#villas">Villas</a>
-        </li>
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#villas">Villas</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <div id="header__logo">
-      <img src="assets/images/hotel-solid.svg" alt="Website Icon">
-    </div>
-    <div id="header__presentation">
-      <h1>Relax your soul</h1>
-      <p>The team of VLV welcomes you. Start relaxing yout soul and enjoy your stay.</p>
-      <a href="">Discover More</a>
+    <div id="header__content">
+      <a href="#" class="header__content--logo">VLV</a>
+      <div class="header__content--presentation">
+        <h1>Relax your soul</h1>
+        <p>The team of VLV welcomes you. Start relaxing yout soul and enjoy your stay.</p>
+        <a href="#">Discover More</a>
+      </div>
     </div>
   </header>
 
   <!-- Booking informacion Section -->
   <section id="booking--informacion">
-    <!--
-    <header>
-      <h2>Discover Serenity</h2>
-      <span></span>
-    </header>
-    <p>Lorem, ipsum dolor sit amet consectetur adipiscing elit. Adipisci laudantium matorea aliquid magni dibitis ipsum
-      delectus impedit lure distinctio, sint tempora asperiores odit tempore temporibus incidunt, non ex expedita sunt.
-    </p>
+    <h2>Discover Serenity</h2>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
     <div>
-      <a href="#">
-        <i class="fas fa-cog"></i>
-      </a>
-      <span>24ºC</span>
+      <a href="#"><i class="fas fa-cog"></i><span>24ºC</span></a>
+      <a href="#"><i class="far fa-clock"></i><span>05:00 PM</span></a>
     </div>
-    <div>
-      <a href="#">
-        <i class="far fa-clock"></i>
-      </a>
-      <span>05:00 PM</span>
-    </div>
-    -->
   </section>
 
   <!-- Booking reserva Section -->
-  <section id="booking--reserva">
-    <!--
-      aaaa
-    -->
+  <section id="booking-reserve">
+    <div class="booking-reserve__date">
+      <div class="booking-reserve__date--arrival">
+        <h5>Arrival</h5>
+        <p>
+          <span>May</span>
+          <span>09</span>
+          <span>&#65088;</span>
+        </p>
+      </div>
+      <div class="booking-reserve__date--departure">
+        <h5>Departure</h5>
+        <p>
+          <span>May</span>
+          <span>23</span>
+          <span>&#65088;</span>
+        </p>
+      </div>
+      <div class="booking-reserve__date--guests">
+        <h5>Guests</h5>
+        <p>
+          <span>&#65087;</span>
+          <span>09</span>
+          <span>&#65088;</span>
+        </p>
+      </div>
+    </div>
+    <div class="booking-reserve__details"> 
+      <a href="#">Make a Reservation</a>
+      <p>Reservation Hotline</p>
+      <p>+1-5263-8965-6546</p>
+      <p>Reservation Assistance Available 24 Hours</p>
+    </div>
   </section>
 
   <!-- Sites Section -->
   <section id="villas">
     <!-- 1 article -->
     <article id="villas__standart">
-      <h1>Standart Villa</h1>
-      <p>Lorem, ipsum dolor sit amet consectetur adipiscing elit. Adipisci laudantium matorea aliquid magni
-        dibitis ipsum delectus impedit lure distinctio, sint tempora asperiores odit tempore temporibus
-        incidunt, non ex expedita sunt.</p>
-      <span>Starting at 200.000&euro;</span>
+      <h2>Standart Villa</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipiscing elit. Adipisci laudantium matorea aliquid magni dibitis ipsum delectus impedit lure distinctio, sint tempora asperiores odit tempore temporibus incidunt, non ex expedita sunt.</p>
+      <a>Starting at 200.000&euro;</a>
     </article>
 
     <!-- 2 article -->
     <article id="villas__superior">
-      <h1>Superior Villa</h1>
-      <p>Lorem, ipsum dolor sit amet consectetur adipiscing elit. Adipisci laudantium matorea aliquid magni
-        dibitis ipsum delectus impedit lure distinctio, sint tempora asperiores odit tempore temporibus
-        incidunt, non ex expedita sunt.</p>
-      <span>Starting at 300.000&euro;</span>
+      <h2>Superior Villa</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipiscing elit. Adipisci laudantium matorea aliquid magni dibitis ipsum delectus impedit lure distinctio, sint tempora asperiores odit tempore temporibus incidunt, non ex expedita sunt.</p>
+      <a>Starting at 300.000&euro;</a>
     </article>
 
     <!-- 3 article -->
     <article id="villas__infinity">
-      <h1>Infinity Villa</h1>
-      <p>Lorem, ipsum dolor sit amet consectetur adipiscing elit. Adipisci laudantium matorea aliquid magni
-        dibitis ipsum delectus impedit lure distinctio, sint tempora asperiores odit tempore temporibus
-        incidunt, non ex expedita sunt.</p>
-      <span>Starting at 700.000&euro;</span>
+      <h2>Infinity Villa</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipiscing elit. Adipisci laudantium matorea aliquid magni dibitis ipsum delectus impedit lure distinctio, sint tempora asperiores odit tempore temporibus incidunt, non ex expedita sunt.</p>
+      <a>Starting at 700.000&euro;</a>
     </article>
 
     <!-- 4 article -->
     <article id="villas__ultra">
-      <h1>Ultra Villa</h1>
-      <p>Lorem, ipsum dolor sit amet consectetur adipiscing elit. Adipisci laudantium matorea aliquid magni
-        dibitis ipsum delectus impedit lure distinctio, sint tempora asperiores odit tempore temporibus
-        incidunt, non ex expedita sunt.</p>
-      <span>Starting at 200.000&euro;</span>
+      <h2>Ultra Villa</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipiscing elit. Adipisci laudantium matorea aliquid magni dibitis ipsum delectus impedit lure distinctio, sint tempora asperiores odit tempore temporibus incidunt, non ex expedita sunt.</p>
+      <a>Starting at 200.000&euro;</a>
     </article>
 
     <!-- 5 article -->
     <article id="villas__galactic">
-      <h1>Galactic Villa</h1>
-      <p>Lorem, ipsum dolor sit amet consectetur adipiscing elit. Adipisci laudantium matorea aliquid magni
-        dibitis ipsum delectus impedit lure distinctio, sint tempora asperiores odit tempore temporibus
-        incidunt, non ex expedita sunt.</p>
-      <span>Starting at 200.000&euro;</span>
+      <h2>Galactic Villa</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipiscing elit. Adipisci laudantium matorea aliquid magni dibitis ipsum delectus impedit lure distinctio, sint tempora asperiores odit tempore temporibus incidunt, non ex expedita sunt.</p>
+      <a>Starting at 200.000&euro;</a>
     </article>
 
     <!-- 6 article -->
     <article id="villas__cosmic">
-      <h1>Cosmic Villa</h1>
-      <p>Lorem, ipsum dolor sit amet consectetur adipiscing elit. Adipisci laudantium matorea aliquid magni
-        dibitis ipsum delectus impedit lure distinctio, sint tempora asperiores odit tempore temporibus
-        incidunt, non ex expedita sunt.</p>
-      <span>Starting at 200.000&euro;</span>
+      <h2>Cosmic Villa</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipiscing elit. Adipisci laudantium matorea aliquid magni dibitis ipsum delectus impedit lure distinctio, sint tempora asperiores odit tempore temporibus incidunt, non ex expedita sunt.</p>
+      <a>Starting at 200.000&euro;</a>
     </article>
     
   </section>
 
   <!-- Comercial Section -->
   <section id="comercial">
-    <h3>We reimagined luxury</h3>
-    <p>Lorem, ipsum dolor sit amet consectetur adipiscing elit. Adipisci laudantium matorea aliquid magni dibitis ipsum
-      delectus impedit lure distinctio, sint tempora asperiores odit tempore temporibus incidunt, non ex expedita sunt.
-    </p>
+    <div class="comercial__content">
+      <h3>We reimagined luxury</h3>
+      <p>Lorem, ipsum dolor sit amet consectetur adipiscing elit. Adipisci laudantium matorea aliquid magni dibitis ipsum delectus impedit lure distinctio, sint tempora asperiores odit tempore temporibus incidunt, non ex expedita sunt.</p>
+    </div>
   </section>
 
   <!-- Eventos Section -->
   <section id="eventos">
-    <div class="eventos__item--1">
-      <h4>Beach Party</h4>
-      <p>Lorem, ipsum dolor sit amet consectetur adipiscing elit. Adipisci laudantium matorea aliquid magni dibitis
-        ipsum delectus impedit lure distinctio, sint tempora asperiores odit tempore temporibus incidunt, non ex
-        expedita sunt.</p>
+    <div class="item">
+      <h2>Beach Party</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipiscing elit. Adipisci laudantium matorea aliquid magni dibitis ipsum delectus impedit lure distinctio, sint tempora asperiores odit tempore temporibus incidunt, non ex expedita sunt.</p>
     </div>
-    <div class="eventos__item--2">
-      <h4>Culture Discovery</h4>
-      <p>Lorem, ipsum dolor sit amet consectetur adipiscing elit. Adipisci laudantium matorea aliquid magni dibitis
-        ipsum delectus impedit lure distinctio, sint tempora asperiores odit tempore temporibus incidunt, non ex
-        expedita sunt.</p>
+    <div class="item">
+      <h2>Culture Discovery</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipiscing elit. Adipisci laudantium matorea aliquid magni dibitis ipsum delectus impedit lure distinctio, sint tempora asperiores odit tempore temporibus incidunt, non ex expedita sunt.</p>
     </div>
-    <div class="eventos__title">
-      <h4>Events</h4>
+    <div class="title">
+      <h2>Events</h2>
     </div>
   </section>
 
   <!-- Gallery Section -->
   <section id="galleries">
-    <!--
-    <div class="galleries__title">
-      <h4>Gallery</h4>
+    <div class="title">
+      <h2>Gallery</h2>
     </div>
-    <video class="galleries__media">
+    <video class="media">
       <source src="assets/images/video.mp4" type="video/mp4">
     </video>
-    -->
   </section>
 
   <!-- Feactures Section -->
   <section id="feactures">
-    <!--
-    <div class="feactures__item--1">
-      <h4>Surfing Package</h4>
-      <p>Lorem, ipsum dolor sit amet consectetur adipiscing elit. Adipisci laudantium matorea aliquid magni dibitis
-        ipsum delectus impedit lure distinctio, sint tempora asperiores odit tempore temporibus incidunt, non ex
-        expedita sunt.</p>
+    <div class="item">
+      <h2>Surfing Package</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipiscing elit. Adipisci laudantium matorea aliquid magni dibitis ipsum delectus impedit lure distinctio, sint tempora asperiores odit tempore temporibus incidunt, non ex expedita sunt.</p>
     </div>
-    <div class="feactures__item--2">
-      <h4>Cocktail Package</h4>
-      <p>Lorem, ipsum dolor sit amet consectetur adipiscing elit. Adipisci laudantium matorea aliquid magni dibitis
-        ipsum delectus impedit lure distinctio, sint tempora asperiores odit tempore temporibus incidunt, non ex
-        expedita sunt.</p>
+    <div class="item">
+      <h2>Cocktail Package</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipiscing elit. Adipisci laudantium matorea aliquid magni dibitis ipsum delectus impedit lure distinctio, sint tempora asperiores odit tempore temporibus incidunt, non ex expedita sunt.</p>
     </div>
-    <div class="feactures__title">
-      <h4>Feactures</h4>
+    <div class="title">
+      <h2>Feactures</h2>
     </div>
-    -->
   </section>
 
   <!-- Testimonials Section -->
   <section id="testimonials">
-    <!--
-    <div class="testimonials__div--1">
-      <h5>Clark Los</h5>
-    </div>
-    <div class="testimonials__div--2">
-      <h5>Clark Los</h5>
-    </div>
-    <div class="testimonials__div--3">
-      <h5>Clark Los</h5>
-    </div>
-    <div class="testimonials__div--4">
-      <h5>Clark Los</h5>
-    </div>
-    <div class="testimonials__div--5">
-      <h5>Clark Los</h5>
-    </div>
-    <div class="testimonials__div--6">
-      <h5>Clark Los</h5>
-    </div>
-    -->
+    <div class="testimonials__div">
+        <div class="testimonials__div--img">
+          <h2>Clark Los</h2>
+        </div>
+        <div class="testimonials__div--text">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+        </div>
+      </div>
+
+      <div class="testimonials__div">
+        <div class="testimonials__div--img">
+          <h2>Clark Los</h2>
+        </div>
+        <div class="testimonials__div--text">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+        </div>
+      </div>
+
+      <div class="testimonials__div">
+        <div class="testimonials__div--img">
+          <h2>Clark Los</h2>
+        </div>
+        <div class="testimonials__div--text">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+        </div>
+      </div>
+
+      <div class="testimonials__div">
+        <div class="testimonials__div--img">
+          <h2>Clark Los</h2>
+        </div>
+        <div class="testimonials__div--text">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+        </div>
+      </div>
+
+      <div class="testimonials__div">
+        <div class="testimonials__div--img">
+          <h2>Clark Los</h2>
+        </div>
+        <div class="testimonials__div--text">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+        </div>
+      </div>
+
+      <div class="testimonials__div">
+        <div class="testimonials__div--img">
+          <h2>Clark Los</h2>
+        </div>
+        <div class="testimonials__div--text">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+        </div>
+      </div>
   </section>
 
   <!-- Footer -->
   <footer id="footer">
-    <!--
-    <p>All Rights Reserved &copy; VLV</p>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-    -->
+    <p>All Right Reserved. &copy; 2020</p>
+    <div class="footer__div">
+      <a href="#" class="footer__div--link"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="footer__div--link"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="footer__div--link"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" class="footer__div--link"><i class="fab fa-instagram"></i></a>
+    </div>
   </footer>
 </body>
 

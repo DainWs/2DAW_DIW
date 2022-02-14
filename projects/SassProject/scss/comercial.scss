@@ -5,9 +5,33 @@ section#comercial {
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
 
-    padding: 5% 15%;
-    
-    text-align: center;
-    color: $primary-text;
+    padding: 10vh 3vw;
     background-color: $primary;
+    
+    .comercial__content {
+        margin: 0 auto;
+        width: 80%;
+        text-align: center;
+
+        h3 {
+            position: relative;
+            margin-bottom: $size-min;
+            padding: 0 $size-min calc($size-min/2);
+            
+            color: $primary-text;
+            font-size: $size-xlarge;
+            font-weight: 300;
+            text-transform: uppercase;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 45%;
+                width: 10%;
+                height: 0.2rem;
+                background-color: $primary-text;
+            }
+        }
+    }
 }
