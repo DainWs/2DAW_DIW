@@ -1,0 +1,6 @@
+/*** Mixins ***/
+@mixin grid-container($gap: 0) {
+    display: grid;
+    row-gap: $gap;
+    column-gap: $gap;
+}
