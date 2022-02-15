@@ -1,13 +1,14 @@
 {
   "dependencies": {
-    "node-sass": "^7.0.1",
-    "sass": "^1.49.7"
+    "gulp": "^4.0.2",
+    "node-sass": "^7.0.1"
   },
   "name": "sassproject",
   "version": "1.0.0",
   "description": "Grid project with sass project",
   "main": "index.js",
   "scripts": {
+    "compile": "gulp sass",
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass --watch App.scss:dist/app.css"
   },
@@ -17,6 +18,7 @@
   "author": "Jose Antonio Duarte Perez",
   "license": "ISC",
   "devDependencies": {
-    "gulp-sass-glob": "^1.1.0"
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.49.7"
   }
 }
