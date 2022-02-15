@@ -1,0 +1,6 @@
+/*== Body ==*/
+.container {
+    display: grid;
+    grid-template-rows: repeat(4, min-content);
+    grid-template-columns: repeat(12, 1fr);
+}

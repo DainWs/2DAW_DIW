@@ -1,6 +1,28 @@
 /*** Mixins ***/
-@mixin grid-container($gap: 0) {
-    display: grid;
-    row-gap: $gap;
-    column-gap: $gap;
+@mixin navigation() {
+    &-list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+    }
+    &-item {
+        list-style: none;
+    }
+    &-link {
+        text-decoration: none;
+        color: color(primary);
+        font-size: size(md);
+        transition: all 0.2s ease;
+        &:hover {
+            color: lighten(color(primary), 30%);
+        }
+    }
+}
+@mixin response($breakpoint) {
+    @if ($breakpoint == xl) {
+        @media(max-width: 120px) {
+            @content
+        }
+    }
 }

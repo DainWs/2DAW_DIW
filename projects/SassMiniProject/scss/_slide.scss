@@ -1,0 +1,52 @@
+.slideshow {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+
+    position: relative;
+    width: 100%;
+    height: 80vh;
+
+    &-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: inherit;
+        height: inherit;
+
+        visibility: hidden;
+        opacity: 0;
+        animation: slideshow 20s linear infinite;
+
+        img {
+            width: inherit;
+            height: inherit;
+            object-fit: cover;
+        }
+
+        @for $i from 1 to 6 {
+            &:nth-child(#{$i}) {
+                animation-delay: #{$i * 4}s;
+            }
+        }
+    }
+
+    &-content {
+        //Secondary
+        background-color: rgba(color(secondary), 0.6);
+        position: absolute;
+        bottom: 6rem;
+        left: 6rem;
+        max-width: 40rem;
+        padding: 5rem;
+
+        h2 {
+            font-size: size(xl);
+            color: color(primary);
+        }
+
+        p {
+            margin: 6rem 0;
+            font-size: size(sm);
+        }
+    }
+}

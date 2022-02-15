@@ -1,1 +1,8 @@
 /*** Functions ***/
+@function color($searched) {
+    @return map-get($colors, $searched);
+}
+
+@function size($searched) {
+    @return map-get($sizes, $searched);
+}
