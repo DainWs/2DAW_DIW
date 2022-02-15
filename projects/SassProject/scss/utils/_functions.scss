@@ -1,0 +1,13 @@
+/*** Functions ***/
+/** Make a background image with a transparent color in front **/
+@function inkImage($image, $primaryColor, $secondaryColor: $primaryColor) {
+    @return linear-gradient($primaryColor, $secondaryColor), url($image)
+};
+
+@function color($key) {
+    @return map-get($colors, $key);
+};
+
+@function size($key) {
+    @return map-get($sizes, $key);
+};

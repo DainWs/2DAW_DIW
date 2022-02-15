@@ -1,0 +1,71 @@
+/*== Testimonials section ==*/ 
+.testimonials {
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-gap: 5rem;
+    grid-template-columns: repeat(3, 28rem);
+    place-content: center;
+
+    padding: 8vh 3vw;
+
+    &__div {
+        position: relative;
+
+        width: 28rem;
+        height: 50rem;
+
+        &:hover {
+            .testimonials__div--img { transform: perspective(100rem) rotateY(0.5turn); }
+            .testimonials__div--text { transform: perspective(100rem) rotateY(1turn); }
+        }
+
+        div {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            display: grid;
+            justify-items: center;
+            align-items: start;
+            
+            padding: 3rem;
+            width: 100%;
+            height: 100%;
+
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            /* Indicate that the backside of the div is not visible for the user */
+            backface-visibility: hidden;
+            
+            transition: all 1s ease-in-out;
+        }
+
+        &--img h2 {
+            border-bottom-right-radius: 15%;
+            border-bottom-left-radius: 15%;
+            padding: 1rem;
+
+            background-color: color(secondary-light);
+        }
+
+        &--text {
+            background-color: color(secondary);
+
+            transform: perspective(100rem) rotateY(0.5turn);
+
+            p {
+                place-self: center;
+                font-size: 2rem;
+                font-weight: 400;
+            }
+        }
+
+        @for $i from 1 to 7 {
+            &:nth-of-type(#{$i}) &--img {
+                background-image: url('assets/images/Testimonials/testimonials-#{$i}.jpg');
+            }
+        }
+    }
+}

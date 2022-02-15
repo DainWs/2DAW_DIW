@@ -2,21 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
 /*** Utils ***/
-@import "scss/utils/variables.scss";
-@import "scss/utils/animations.scss";
-@import "scss/utils/placeholders.scss";
-@import "scss/utils/mixins.scss";
-@import "scss/utils/functions.scss";
-@import "scss/utils/resets.scss";
+@import "scss/utils/_variables.scss";
+@import "scss/utils/_animations.scss";
+@import "scss/utils/_placeholders.scss";
+@import "scss/utils/_mixins.scss";
+@import "scss/utils/_functions.scss";
+@import "scss/utils/_resets.scss";
 
 /*** Styles ***/
-@import "scss/body.scss";
-@import "scss/header.scss";
-@import "scss/booking.scss";
-@import "scss/villas.scss";
-@import "scss/comercial.scss";
-@import "scss/events.scss";
-@import "scss/galleries.scss";
-@import "scss/feactures.scss";
-@import "scss/testimonials.scss";
-@import "scss/footer.scss";
+@import "scss/_body.scss";
+@import "scss/_header.scss";
+@import "scss/_booking.scss";
+@import "scss/_villas.scss";
+@import "scss/_comercial.scss";
+@import "scss/_events.scss";
+@import "scss/_galleries.scss";
+@import "scss/_feactures.scss";
+@import "scss/_testimonials.scss";
+@import "scss/_footer.scss";
+@import "scss/_layout.scss";

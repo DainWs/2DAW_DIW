@@ -1,46 +1,57 @@
 /*=== Sites section ===*/
-section#villas {
-    @include grid-section-size(12);
-    @include grid-container($size-min);
+.villas {
+    grid-column: 1 / -1;
+    
+    display: grid;
+    grid-gap: 2rem;
     grid-template-rows: repeat(2, 30vw);
     grid-template-columns: repeat(3, 1fr);
 
-    & > article {
-        padding: $size-min;
+    &__item {
+        padding: 2rem;
         transition: transform 0.3s ease-in-out;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
 
         &:hover,
         &:active {
             transform: scale(1.05);
         }
 
-        h2 {
-            padding: 0 $size-min calc($size-min/2) 0;
-            
-            color: $primary-text;
-            font-size: $size-xlarge;
+        h2 {            
+            color: color(primary-text);
+            font-size: size(xl);
             font-weight: 400;
             text-transform: uppercase;
         }
 
         p {
-            margin: calc($size-min*0.75) 0 calc($size-min*2) 0;
-            color: $primary-text;
-            font-size: $size-min;
+            color: color(primary-text);
+            font-size: 2rem;
             font-weight: 400;
+        }
+
+        div {
+            display: grid;
+            align-items: end;
+            justify-content: start;
         }
 
         a {
             z-index: 2;
             overflow: hidden;
+
+            margin: 0 auto 2rem auto;
             display: inline-block;
-            margin-bottom: $size-min;
-            color: $primary;
-            background-color: $primary-text;
+            
+            color: color(primary);
+            background-color: color(primary-text);
 
             &:hover,
             &:active {
-                color: $primary-text;
+                color: color(primary-text);
 
                 &::before {
                     height: 400%;
@@ -48,29 +59,28 @@ section#villas {
             }
 
             &::before {
-                z-index: -1;
                 content: " ";
+                z-index: -1;
+
                 position: absolute;
                 top: 50%;
                 left: 50%;
+                
                 width: 100%;
                 height: 0%;
-                background-color: $secondary;
+                
+                background-color: color(secondary);
                 transition: height 0.3s ease-in-out;
             }
         }
 
-        &:nth-child(odd) a::before {
+        a::before {
             transform: translate(-50%, -50%) rotate(45deg);
-        }
-
-        &:nth-child(even) a::before {
-            transform: translate(-50%, -50%) rotate(-45deg);
         }
 
         @for $i from 1 to 7 {
             &:nth-of-type(#{$i}) {
-                background: inkImage('assets/images/Villas/villa-#{$i}.jpg', $primary-light, $tertiary-light);
+                background: inkImage('assets/images/Villas/villa-#{$i}.jpg', color(primary-light), color(tertiary-light));
                 background-position: center;
                 background-size: cover;
             }

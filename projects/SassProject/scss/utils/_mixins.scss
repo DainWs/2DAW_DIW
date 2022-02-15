@@ -1,0 +1,97 @@
+/*** Mixins ***/
+@mixin grid-section-size($num-columns: 1, $num-rows: 1, $start-column: -1, $start-row: -1) {
+    @if $start-row == -1 {
+        grid-row: span $num-rows;
+    } @else {
+        grid-row: $start-row / span $num-rows;
+    }
+
+    @if $start-column == -1 {
+        grid-column: span $num-columns;    
+    } @else {
+        grid-column: $start-column / span $num-columns;    
+    }
+}
+
+@mixin wide-section($backgroundColor, $side) {
+    @if ($side == left) {
+        grid-column: 1 / -3;
+        display: grid;
+        grid-template-columns: repeat(2, 45%) auto;
+        grid-template-rows: 1fr;
+
+        &--title {
+            grid-column: 3 / 4;
+            grid-row: 1 / 2;
+
+            h2 {
+                transform: rotate(0.25turn);
+            }
+        }
+    }
+    @else {
+        grid-column: 3 / -1;
+        display: grid;
+        grid-template-columns: auto 90%;
+        grid-template-rows: 1fr;
+
+        &--title {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+
+            h2 {
+                transform: rotate(-0.25turn);
+            }
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        grid-column: center-start / center-end;
+
+        @if ($side == left) {
+            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+            &--item:first-child { border: none; }
+        }
+
+        &--title { display: none; }
+    }
+    
+    &--item {
+        display: grid;
+        grid-gap: 4vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content auto;
+        align-items: center;
+        justify-items: start;
+        padding: 8vh 3vw;
+
+        color: color(primary-text);
+        h2 {
+            /*color: color(primary-text);*/
+            font-size: size(xl);
+            font-weight: 400;
+        }
+
+        p {
+            /*color: color(primary-text);*/
+            font-size: size(md);
+            font-weight: 500;
+        }
+    }
+
+    &--title {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        place-items: center;
+
+        background-color: $backgroundColor;
+
+        h2 {
+            color: color(primary-text);
+            font-size: size(xl);
+            font-weight: 500;
+        }
+    }
+}

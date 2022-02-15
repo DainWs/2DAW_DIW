@@ -1,4 +1,0 @@
-/*** Functions ***/
-@function inkImage($image, $primaryColor, $secondaryColor: $primaryColor) {
-    @return linear-gradient($primaryColor, $secondaryColor), url($image)
-}

@@ -1,0 +1,89 @@
+/* MEDIA QUERIES */
+/* 1000px */
+@media screen and (max-width: 1000px) {
+    a {
+        &:link,
+        &:visited {
+            font-size: size(md);
+        }
+    }
+
+    .villas { grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr)); }
+}
+  
+/* 800px */
+@media screen and (max-width: 800px) {
+    .booking--informacion {
+        grid-column: center-start / center-end;
+        padding: 4vh 3vw;
+        
+        &__title { 
+            text-align: center; 
+
+            &::after {
+                left: 35%;
+                width: 20%;
+            }
+        }
+
+    }
+    
+    .booking--reserve {
+        grid-column: center-start / center-end; 
+        grid-gap: 3vw;
+
+        padding: 4vh 3vw;
+
+        & > div {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: min-content;
+            grid-gap: 2rem;
+            place-items: center;
+
+            padding: 2rem;
+        }
+    }
+  
+    .villas { grid-gap: 0; }
+  
+    .footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 3rem;
+    }
+  }
+  
+/* 600px */
+@media screen and (max-width: 600px) {
+    p { font-size: 1.5rem; }
+    .header__content--presentation p { font-size: 2rem; }
+    .booking--reserve { 
+        grid-template-rows: repeat(2, max-content); 
+
+        & > div {
+            grid-template-columns: min-content;
+            padding: 4rem;
+        }
+    }
+    .villas__item p { margin: 1.5rem 0 4rem 0; }
+    .footer { padding: 4vh 2vw; }
+}
+  
+/* 400px */
+@media screen and (max-width: 400px) {
+    .booking--reserve {
+        &__date {
+            grid-template-columns: auto;
+            grid-template-rows: repeat(3, 1fr);
+            grid-row-gap: 4vh;
+        }
+
+        &__details {
+            justify-self: center;
+            padding: 0 2rem;
+        }
+    }
+  
+    .villas { grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); }
+}
+  

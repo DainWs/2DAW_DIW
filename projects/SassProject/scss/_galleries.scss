@@ -1,0 +1,18 @@
+/*== Galleries section ==*/ 
+.galleries {    
+    @include wide-section(color(primary), right);
+    height: 90vh;
+
+    &--media {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+
+        overflow: hidden;
+        height: 100%;
+
+        img {
+            overflow: hidden;
+            height: 100%;
+        }
+    }
+}

@@ -1,0 +1,84 @@
+/*=== Booking reserva Section ===*/
+.booking--reserve {
+    grid-column: 7 / -2;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-gap: 2vh;
+    grid-template-rows: repeat(2, 1fr);
+    padding: 8vh 3vw;
+
+    &__date {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+        column-gap: 2vh;
+        row-gap: 3vh;
+
+        div {
+            display: grid;
+
+            h5 {
+                margin-bottom: 1rem;
+                text-align: center;
+                font-size: size(md);
+            }
+
+            p {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(3, 1fr);
+                place-items: center;
+
+                position: relative;
+                padding: 2rem 4rem;
+                background-color: color(secondary);
+
+                /** Top cradle/arrow **/
+                &::before {
+                    content: "";
+
+                    position: absolute;
+                    bottom: 100%;
+                    left: 50%;
+                    
+                    border: 1.5rem solid;
+                    border-color: transparent transparent color(secondary) transparent;
+                    margin-left: -1.5rem;
+                }
+
+                span {
+                    font-size: size(md);
+                    font-weight: 300;
+
+                    &:nth-of-type(2) {
+                        font-size: 2rem * 1.5;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+
+    &__details {
+        align-self: end;
+
+        a {
+            color: color(primary-text);
+            background-color: color(secondary);
+            transition: all 0.3s ease-in-out;
+
+            &:hover,
+            &:active {
+                border: 0.1rem solid color(secondary);
+                color: color(secondary);
+                background-color: color(primary-text);
+            }
+        }
+
+        p {
+            color: color(primary);
+            font-size: 2rem;
+            &:first-of-type { margin-top: 4rem; }
+        }
+    }
+}

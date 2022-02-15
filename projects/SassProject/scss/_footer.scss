@@ -1,0 +1,33 @@
+/*== Footer section ==*/ 
+.footer {
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+
+    padding: 6vh 4vw;
+
+    color: color(primary-text);
+    font-size: size(bg);
+    background-color: color(primary);
+
+    &__div {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+
+        a {
+            margin-right: 1rem;
+            border-radius: 4rem;
+            background-color: color(secondary);
+            animation: networks 3s linear infinite;
+
+            &--link i {
+                font-size: 2rem;
+                color: color(primary);
+            }
+        }
+    }
+}

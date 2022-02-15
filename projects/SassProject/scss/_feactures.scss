@@ -1,0 +1,18 @@
+/*== Feactures section ==*/ 
+.feactures {
+    @include wide-section(color(secondary), left);
+
+    $images: (
+        1: 'assets/images/Features/cocktail.jpg',
+        2: 'assets/images/Features/surfing.jpg'
+    );
+
+    @for $i from 1 to 3 {
+        &--item:nth-of-type(#{$i}) {
+            border-right: solid 0.2rem color(secondary);
+            background: inkImage(map-get($images, $i), color(secondary-light), color(secondary-light));
+            background-size: cover;
+            background-position: center;
+        }
+    }
+}
