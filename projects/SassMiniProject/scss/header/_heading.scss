@@ -1,0 +1,13 @@
+.heading {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    text-align: center;
+    
+    &-text {
+        font-family: 'Great Vibes', cursive;
+        //size(xl)
+        font-size: 2rem * 2;
+        font-weight: lighter;
+        letter-spacing: 0.5rem;
+    }
+}

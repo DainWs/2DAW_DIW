@@ -1,0 +1,18 @@
+/* Error: $color: null is not a color.
+ *    ,
+ * 35 |         background-color: rgba(color(secondary), 0.6);
+ *    |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *    '
+ *   scss\_slide.scss 35:27  @import
+ *   App.scss 15:9           root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: $color: null is not a color.\a    \2577 \a 35 \2502          background-color: rgba(color(secondary), 0.6);\d\a    \2502                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   scss\\_slide.scss 35:27  @import\a   App.scss 15:9           root stylesheet";
+}

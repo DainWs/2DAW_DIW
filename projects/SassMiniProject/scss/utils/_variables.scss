@@ -1,0 +1,27 @@
+// Definicion
+// Variables globales
+
+/*** Colores ***/
+/* Colores primarios */
+$colors: (
+    primary: #333
+);
+$primary: #333;
+/* Colores secundarios */
+$secondary: #ffe; 
+/* Colores terciarios */
+$tertiary:  #f2f0f1;
+/* Colores cuaternarios */
+$quaternary: #ff94088e;
+/** Text colors **/
+$primary-text: white;
+
+/*** Fuente ***/
+$sizes: (
+    primary: #333
+);
+$fontFamily-primary: 'Titillium Web';
+$fontSize-default: 62.5%;
+$fontSize-headers: calc(1rem + 8vw);
+$fontSize-paragraph: calc(1rem + 1.5vw);
+$fontSize-links: calc(1rem + 0.66667vw);
