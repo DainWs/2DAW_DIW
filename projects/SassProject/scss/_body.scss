@@ -2,8 +2,8 @@
 body {
     overflow-x: hidden;
     display: grid;
-    grid-template-columns: [container-start] 1fr [center-start] repeat(10, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] 1fr [container-end];
-    grid-template-rows: 100vh repeat(8, min-content);
+    grid-template-columns: 1fr [center-start] repeat(10, minmax(min-content, 11rem)) [center-end] 1fr;
+    grid-template-rows: 100vh repeat(9, min-content);
     
     width: 100vw;
 

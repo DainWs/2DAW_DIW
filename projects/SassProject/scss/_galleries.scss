@@ -3,6 +3,8 @@
     @include wide-section(color(primary), right);
     height: 90vh;
 
+    overflow-x: hidden;
+
     &--media {
         grid-column: 2 / 3;
         grid-row: 1 / 2;

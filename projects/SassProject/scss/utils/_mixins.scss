@@ -14,10 +14,10 @@
 }
 
 @mixin wide-section($backgroundColor, $side) {
+    grid-column: 1 / -1;
     @if ($side == left) {
-        grid-column: 1 / -3;
         display: grid;
-        grid-template-columns: repeat(2, 45%) auto;
+        grid-template-columns: repeat(2, 45%) 10%;
         grid-template-rows: 1fr;
 
         &--title {
@@ -30,9 +30,8 @@
         }
     }
     @else {
-        grid-column: 3 / -1;
         display: grid;
-        grid-template-columns: auto 90%;
+        grid-template-columns: 10% 90%;
         grid-template-rows: 1fr;
 
         &--title {
@@ -43,18 +42,6 @@
                 transform: rotate(-0.25turn);
             }
         }
-    }
-
-    @media screen and (max-width: 600px) {
-        grid-column: center-start / center-end;
-
-        @if ($side == left) {
-            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-
-            &--item:first-child { border: none; }
-        }
-
-        &--title { display: none; }
     }
     
     &--item {
@@ -85,6 +72,7 @@
         grid-template-rows: 1fr;
         grid-template-columns: 1fr;
         place-items: center;
+        justify-content: center;
 
         background-color: $backgroundColor;
 

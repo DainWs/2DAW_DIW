@@ -3,15 +3,18 @@
     grid-column: 1 / -1;
 
     display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     place-items: center;
 
-    padding: 6vh 4vw;
+    padding: 4vh 2vw;
 
     color: color(primary-text);
-    font-size: size(bg);
     background-color: color(primary);
+
+    p {
+        font-size: size(md);
+    }
 
     &__div {
         display: grid;

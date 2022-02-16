@@ -3,9 +3,9 @@
     grid-column: 1 / -1;
     
     display: grid;
-    grid-gap: 2rem;
-    grid-template-rows: repeat(2, 30vw);
-    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0;
+    grid-template-rows: repeat(6, 50vw);
+    grid-template-columns: 1fr;
 
     &__item {
         padding: 2rem;
@@ -13,7 +13,7 @@
 
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: min-content auto min-content;
 
         &:hover,
         &:active {
@@ -31,6 +31,7 @@
             color: color(primary-text);
             font-size: 2rem;
             font-weight: 400;
+            overflow-y: hidden;
         }
 
         div {
