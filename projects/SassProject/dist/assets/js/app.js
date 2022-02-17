@@ -1,12 +1,1 @@
-window.onload = () => {
-  const hamburgerContainer = document.querySelector(".header__nav");
-  const hamburger = document.querySelector(".header__nav--hamburger");
-  const links = document.querySelectorAll(".header__nav--container li");
-
-  hamburger.addEventListener("click", () => {
-    hamburgerContainer.classList.toggle("clicked");
-    links.forEach((link) => {
-      link.classList.toggle("fade");
-    });
-  });
-}
+window.onload=()=>{const e=document.querySelector(".header__nav"),c=document.querySelector(".header__nav--hamburger"),a=document.querySelectorAll(".header__nav--container li");c.addEventListener("click",()=>{e.classList.toggle("clicked"),a.forEach(e=>{e.classList.toggle("fade")})})};

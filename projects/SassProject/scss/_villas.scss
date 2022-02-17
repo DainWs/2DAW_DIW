@@ -15,11 +15,6 @@
         grid-template-columns: 1fr;
         grid-template-rows: min-content auto min-content;
 
-        &:hover,
-        &:active {
-            transform: scale(1.05);
-        }
-
         h2 {            
             color: color(primary-text);
             font-size: size(xl);
@@ -81,7 +76,7 @@
 
         @for $i from 1 to 7 {
             &:nth-of-type(#{$i}) {
-                background: inkImage('assets/images/Villas/villa-#{$i}.jpg', color(primary-light), color(tertiary-light));
+                background: inkImage('../images/Villas/villa-#{$i}.jpg', color(primary-light), color(tertiary-light));
                 background-position: center;
                 background-size: cover;
             }

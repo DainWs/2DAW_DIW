@@ -3,8 +3,8 @@
     @include wide-section(color(secondary), left);
 
     $images: (
-        1: 'assets/images/Features/cocktail.jpg',
-        2: 'assets/images/Features/surfing.jpg'
+        1: '../images/Features/cocktail.jpg',
+        2: '../images/Features/surfing.jpg'
     );
 
     @for $i from 1 to 3 {

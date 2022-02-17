@@ -24,8 +24,15 @@
         a {
             margin-right: 1rem;
             border-radius: 4rem;
+            padding: 1rem 1.5rem;
             background-color: color(secondary);
-            animation: networks 3s linear infinite;
+            
+            @for $i from 0 to 4 {
+                &:nth-child(#{$i + 1}) {
+                    animation: networks 3s linear #{$i * 0.25}s infinite;    
+                }
+            }
+            
 
             &--link i {
                 font-size: 2rem;

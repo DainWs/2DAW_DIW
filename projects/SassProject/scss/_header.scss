@@ -3,7 +3,7 @@
     grid-column: 1 / -1;
     height: 100vh;
 
-    background: inkImage('assets/images/hero.jpg', color(primary-light), color(primary-light));
+    background: inkImage('../images/hero.jpg', color(primary-light), color(primary-light));
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

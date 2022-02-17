@@ -64,7 +64,7 @@
 
         @for $i from 1 to 7 {
             &:nth-of-type(#{$i}) &--img {
-                background-image: url('assets/images/Testimonials/testimonials-#{$i}.jpg');
+                background-image: url('../images/Testimonials/testimonials-#{$i}.jpg');
             }
         }
     }
