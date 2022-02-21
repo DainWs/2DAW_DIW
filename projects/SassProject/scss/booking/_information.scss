@@ -37,7 +37,6 @@
         grid-template-columns: repeat(2, 1fr);
         
         a {
-            /* @include grid-section-size(1, 1); */
             display: grid;
             grid-template-rows: 8vh;
             grid-template-columns: 1fr 1fr;

@@ -1,13 +1,29 @@
 /*** Functions ***/
-/** Make a background image with a transparent color in front **/
+/// Make a background image with a transparent color in front
+/// @param {string} $image 
+///     The image that will be used for tinted background
+/// @param {string} $primaryColor 
+///     The primary color that will be used for left size of the tinted background
+/// @param {string} $secondaryColor 
+///     The secondary color that will be used for right size of the tinted background, 
+///     this one is the same as primary color if it isn't specified
+/// @return {arguments} the background: style arguments
 @function inkImage($image, $primaryColor, $secondaryColor: $primaryColor) {
     @return linear-gradient($primaryColor, $secondaryColor), url($image)
 };
 
+/// Return the color specified by the given key in the $colors variable
+/// @param {string} $key
+///     The color identifier in the $colors variable
+/// @return {color} the color that is identifier by the $key
 @function color($key) {
     @return map-get($colors, $key);
 };
 
+/// Return the font-size specified by the given key in the $sizes variable
+/// @param {string} $key
+///     The font-size identifier in the $sizes variable
+/// @return {font-size} the font-size that is identifier by the $key
 @function size($key) {
     @return map-get($sizes, $key);
 };
