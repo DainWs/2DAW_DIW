@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "node-sass": "^7.0.1"
+  },
+  "name": "sassproject",
+  "version": "1.0.0",
+  "description": "Grid project with sass and glup",
+  "scripts": {
+    "compile": "gulp default",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch App.scss:dist/assets/css/app.css"
+  },
+  "author": "Jose Antonio Duarte Perez",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-minifier": "^3.5.0",
+    "gulp-preprocess": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.49.7"
+  }
+}

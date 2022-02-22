@@ -1,0 +1,35 @@
+/*== Footer section ==*/ 
+.footer {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    place-items: center;
+
+    padding: 4vh 2vw;
+    height: 70vh;
+
+    color: color(white);
+    background-color: color(dark);
+
+    p {
+        font-size: size(md);
+    }
+
+    &__div {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+
+        a {
+            margin-right: 1rem;
+            border-radius: 4rem;
+            padding: 1rem 1.5rem;
+            background-color: color(dark);
+
+            &--link i {
+                font-size: 2rem;
+                color: color(white);
+            }
+        }
+    }
+}

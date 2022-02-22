@@ -1,0 +1,13 @@
+/*** Animations ***/
+/// Animation for the hamburger menu item
+@keyframes menu-show {
+    0% { right: 60vw; transform: rotateZ(-360deg);}
+    100% { right: 3rem; transform: rotateZ(0deg);}
+}
+
+/// The animation for the Social networks
+@keyframes networks {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}

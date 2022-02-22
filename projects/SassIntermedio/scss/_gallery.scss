@@ -1,0 +1,14 @@
+/*=== Sites section ===*/
+.gallery {    
+    display: grid;
+    grid-template-rows: repeat(2, 33vw);
+    grid-template-columns: repeat(3, auto);
+
+    @for $i from 1 to 7 {
+        &__item:nth-of-type(#{$i}) {
+            background: inkImage('../images/gallery-img-#{$i}.jpeg', rgba(color(black), 0.8));
+            background-position: center;
+            background-size: cover;
+        }
+    }
+}

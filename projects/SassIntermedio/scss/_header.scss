@@ -1,0 +1,12 @@
+/*=== Headers (Menu) ===*/
+.header {
+    height: 100vh;
+
+    background: inkImage('../images/bg.jpeg', rgba(color(black), 0.8));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@import 'header/_content.scss';
+@import 'header/_navigation.scss';

@@ -1,0 +1,77 @@
+/*** Mixins ***/
+/// Set aside a section to the defined side with the defined color, 
+/// 'left' for the left and 'right' for the right
+/// @param {color} $backgroundColor
+///     The main section color
+/// @param {left, right} $side
+///     The main side that will be asided
+@mixin wide-section($backgroundColor, $side) {
+    grid-column: 1 / -1;
+    @if ($side == left) {
+        display: grid;
+        grid-template-columns: repeat(2, 45%) 10%;
+        grid-template-rows: 1fr;
+
+        &--title {
+            grid-column: 3 / 4;
+            grid-row: 1 / 2;
+
+            h2 {
+                transform: rotate(0.25turn);
+            }
+        }
+    }
+    @else {
+        display: grid;
+        grid-template-columns: 10% 90%;
+        grid-template-rows: 1fr;
+
+        &--title {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+
+            h2 {
+                transform: rotate(-0.25turn);
+            }
+        }
+    }
+    
+    &--item {
+        display: grid;
+        grid-gap: 4vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content auto;
+        align-items: center;
+        justify-items: start;
+        padding: 8vh 3vw;
+
+        color: color(primary-text);
+        h2 {
+            /*color: color(primary-text);*/
+            font-size: size(xl);
+            font-weight: 400;
+        }
+
+        p {
+            /*color: color(primary-text);*/
+            font-size: size(md);
+            font-weight: 500;
+        }
+    }
+
+    &--title {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        place-items: center;
+        justify-content: center;
+
+        background-color: $backgroundColor;
+
+        h2 {
+            color: color(primary-text);
+            font-size: size(xl);
+            font-weight: 500;
+        }
+    }
+}

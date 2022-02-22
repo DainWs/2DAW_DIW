@@ -1,0 +1,1 @@
+window.onload=()=>{const e=document.querySelector(".header__nav"),c=document.querySelector(".header__nav--hamburger"),a=document.querySelectorAll(".header__nav--container li");c.addEventListener("click",()=>{e.classList.toggle("clicked"),a.forEach(e=>{e.classList.toggle("fade")})})};

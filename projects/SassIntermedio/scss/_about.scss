@@ -1,0 +1,30 @@
+/*=== Booking ===*/
+.about {
+    height: 70vh;
+
+    display: flex;
+
+    background-color: color(dark);
+        
+    &__img {
+        max-width: 50%;
+        
+        img { width: 100%; }
+    }
+
+    &__information {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &--subtitle {
+            font-size: size(lg);
+        }
+        
+        span {
+            color: color(primary);
+        }
+    }
+
+}

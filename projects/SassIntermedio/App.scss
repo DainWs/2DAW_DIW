@@ -1,0 +1,17 @@
+/*** Imports ***/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Josefin+Sans:wght@300;400;600;700&family=Nunito:wght@300;400;600;700&display=swap');
+
+/*** Utils ***/
+@import "scss/utils/_variables.scss";
+@import "scss/utils/_animations.scss";
+@import "scss/utils/_placeholders.scss";
+@import "scss/utils/_mixins.scss";
+@import "scss/utils/_functions.scss";
+@import "scss/utils/_resets.scss";
+
+/*** Styles ***/
+@import "scss/_body.scss";
+@import "scss/_header.scss";
+@import "scss/_about.scss";
+@import "scss/_gallery.scss";
+@import "scss/_footer.scss";

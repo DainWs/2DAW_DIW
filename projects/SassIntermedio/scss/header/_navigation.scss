@@ -1,0 +1,44 @@
+/*== Header nav ==*/
+.header__nav {
+    position: fixed;
+
+    &--container {
+        display: none;
+    }
+
+    /*** Hamburger menu ***/
+    &--hamburger {
+        cursor: pointer;
+
+        position: fixed;
+        top: 2rem;
+        right: 3rem;
+
+        padding: 1rem;
+        width: 5rem;
+        height: 5rem;
+        
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        justify-content: space-around;
+        align-items: center;
+
+        animation: menu-show 2s;
+
+        /* Hamburger lines */
+        .line {
+            border-radius: 0.2rem;
+            width: 100%;
+            height: 50%;
+            
+            background-color: color(primary);
+            
+            transition: all 0.4s ease-in-out;
+        }
+    }
+
+    /** Clicked effect **/
+    &.clicked {
+    }
+}
